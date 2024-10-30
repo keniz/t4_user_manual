@@ -22,7 +22,7 @@ Record **COFT.2**
 
 A blank record closes the COFT data block. Repeat records COFT.l for as many connections as desired.
 
-If the input keyword is in lower case “coft” or “coft\_”, an alternative input for this record is provided. A list of as more as 12 pair of element names (no blank between elements) each line in free format will be read, and ICOFTF is set to 0. Multiple lines are allowed.
+If the input keyword is in lower case “coft” or “coft\_”, an alternative input for this record is provided. A list of as more as 12 pair of element names (no blank between elements) each line in free format will be read, and ICOFTF is set to 0. Multiple lines are allowed. If IE(131)=1, diffusive flux will be written.&#x20;
 
 **Used in**: All EOS modules
 

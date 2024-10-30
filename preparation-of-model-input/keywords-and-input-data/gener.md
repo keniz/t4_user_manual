@@ -91,7 +91,27 @@ Inputs of mass fractions through HX, LOT12, LOT13, and LOT14 for injection fluid
 
 The component name can also be an option of the TYPE. This option specifies the injection or production of the component. For example, TYPE “CO2” represents the injection or production CO2 to/from the model element.  A negative GX indicates production and positive GX indicates injection.
 
-_ITAB_               unless left blank, table of specific enthalpies will be read (_LTAB_ > 1 only). When time-dependent injection is used, _ITAB_ must be specified non-blank, and specific enthalpy data must be given.
+_ITAB_               unless left blank, table of specific enthalpies will be read (_LTAB_ > 1 only). When time-dependent injection is used, _ITAB_ must be specified non-blank, and specific enthalpy data must be given. If _LTAB_ =0 or 1 and  _ITAB_ is non-blank (excluding _ITAB_ ="V" or "M"), user provided enthalpy will be used for the calculation, not matter injection or production. In addition, if _ITAB_ is "M", "N",  “V” or “T”, it has special meanings:
+
+&#x20;          _“V” or “v”_     production or injection rate is in volume per second, no time series of
+
+&#x20;                              specific enthalpy data will be read (may need additional inputs with[ **IE(55)**, ](../../appendix/c-additional-program-options.md)
+
+&#x20;                              [**FE(66)**-](../../appendix/c-additional-program-options.md)[**FE(79)**](../../appendix/c-additional-program-options.md)).
+
+&#x20;           “_T” or “t_”     production or injection rate is in volume per second, the time series of
+
+&#x20;                              specific enthalpy data will be read  (may need additional inputs with[ **IE(55)**, ](../../appendix/c-additional-program-options.md)
+
+&#x20;                              [**FE(66)**- ](../../appendix/c-additional-program-options.md)[**FE(79)**](../../appendix/c-additional-program-options.md)).
+
+&#x20;          _“M” or “m”_   production or injection rate is in mole per second, enthalpy is in J/mole,
+
+&#x20;                              no time series of specific enthalpy data will be read.
+
+&#x20;           _“N” or “n”_   production or injection rate is in mole per second, enthalpy is in J/mole,
+
+&#x20;                              the time series of specific enthalpy data will be read.
 
 _GX_                  constant generation rate; positive for injection, negative for production; _GX_ is mass rate (kg/sec) for generation types COMl, COM2, COM3, etc., and MASS; it is energy rate (J/s) for a HEAT sink/source. For wells on deliverability, type GAPP, AQPP, and QIPP, _GX_ is productivity index PI ( $$m^3$$), see Eq. (4-15). For type GAIP, AQIP, and OIIP, GX is bottomhole pressure,
 
@@ -131,23 +151,43 @@ _F3_                   specific enthalpy of produced or injected fluid.
 
 &#x20;                       Repeat records GENER.1, 1.1, 1.2, and 1.3 for the number of sinks/sources desired.
 
-In TOUGH3, if the LTAB > 1 and ITAB is non-blank, the time series of specific enthalpy of produced or injected fluid will be read. In TOUGH4, the ITAB remains the same functionality, except it is “V” or “T”, which has special meanings:
+We provide an alternative input for Record **GENER.l.l** (optional, _LTAB_ < -1 only)
 
-&#x20;          _“V” or “v”_     production or injection rate is in volume per second, no time series of
+&#x20;                       Free format for 4 parameters per line, or Format (3E14.7, 1A10)
 
-&#x20;                              specific enthalpy data will be read.
+&#x20;                       _GTime, GRate, GEnthalpy, GType_
 
-&#x20;           “_T” or “t_”     production or injection rate is in volume per second, the time series of
+_GTime_            generation time.
 
-&#x20;                              specific enthalpy data will be read.
+GRate             injection or production rate at the time _GTime_. As special cases, it is  production&#x20;
 
-&#x20;          _“M” or “m”_   production or injection rate is in mole per second, enthalpy is in J/mole,
+&#x20;                        index for well type (_GType_ ) DELV, GAPP, AQPP and OIPP, and it is bottom hole&#x20;
 
-&#x20;                              no time series of specific enthalpy data will be read.
+&#x20;                        pressure for well type GAIP,  AQIP, and QIIP.
 
-&#x20;           _“N” or “n”_   production or injection rate is in mole per second, enthalpy is in J/mole,
+GEnthalpy     specific enthalpy of produced or injected fluid. As a special case, it is bottom hole&#x20;
 
-&#x20;                              the time series of specific enthalpy data will be read.
+&#x20;                        pressure for well type DELV, GAPP, AQPP and OIPP.
+
+_GType_             Well production or injection type.&#x20;
+
+_GTime_ can be in different time unit and in time series or time section based on well "_TYPE_"  inputted by Record GENER.1 (We borrow variable "_TYPE"_ for this purpose as it is not used for well with such alternative input). The "_TYPE_" can be:
+
+"SECS"               Time unit is in second, time series (default).
+
+"HOUS"              Time unit is in day, time series.
+
+"DAYS"               Time unit is in day, time series..
+
+"SECP"               Time unit is in second, time period.
+
+"HOUP"              Time unit is in day, time period.
+
+"DAYP"               Time unit is in day, time period.
+
+_GType_ can be any types that are allowed for the "_TYPE_"  in the Record GENER.1 . An additional type "CLOS" is defined for indicating close of a well. &#x20;
+
+Repeat input GENER.1.1 for abs(LTAB) times.
 
 Record **GENER.2**        A blank record closes the GENER data block.
 
@@ -161,8 +201,86 @@ _GENER                              // in main input file_
 
 _A3A 1, injH2, , , , , COM3,  , 5.0E+00, 5.356e4     //ELNE, SLNS,  ,  ,  ,  , TYPE,  , GX, EX_
 
-In GENER file with free format, TOUGH4 does not allow including NSEQ, NADD, and NADS (which will not be used) in the input line. The formatted input remains the same parameters which is for compatible with TOUGH3 input.
+In GENER **file** with free format, TOUGH4 does not allow including NSEQ, NADD, and NADS (which will not be used) in the input line. The formatted input remains the same parameters which is for compatible with TOUGH3 input.
 
 _GENER_&#x20;
 
 _A3A 1, injH2,  , COM3,  , 5.0E+00, 5.356e4       //ELNE, SLNS,  LTAB, TYPE,  ITAB, GX, EX_
+
+We may use the **alternative input** for a complex well operation. For example, a well for H2 storage has following operation history:
+
+&#x20;  (1) Produce water to reduce reservoir pressure at a rate of 10kg/s  for 2 days.
+
+&#x20;  (2) Inject cushion gas CO2 at 1kg/s for 5 days
+
+&#x20;  (3) Close well for 3 days.
+
+&#x20;  (4) Inject H2 for 0.2 day at a rate 2kg/s.
+
+&#x20;  (5) close well for 0.7 day.
+
+&#x20;  (6)  produce H2 for o.1 day at a rate 4kg/s.
+
+&#x20;  (7)  repeat step (4-6) for additional two days.
+
+The input will be:
+
+_GENER_
+
+_A3A 1, injH2,  ,  ,  , -12,  DAYP,_&#x20;
+
+2.0, -10.0, , WATE                                    //produce water    &#x20;
+
+5.0, 1.0,  .526684E+06_, CO2                 //inject CO2, 5.356e4 enthalpy of injected CO2_
+
+_3.0,  ,  ,CLOS                                             //close well_
+
+_0.2, 2.0,  5.356e4 , H2                             // inject H2_
+
+_0.7, , ,CLOS_
+
+_0.1, -4.0,   , H2                                            //produce H2_
+
+_0.2, 2.0,  5.356e4 , H2                             // inject H2_
+
+_0.7, , ,CLOS_
+
+_0.1, -4.0,  , H2_
+
+_0.2, 2.0,  5.356e4 , H2                             // inject H2_
+
+_0.7, , ,CLOS_
+
+_0.1, -4.0,   , H2_
+
+If "_TYPE_" is "DAYS" , the input will be like:
+
+_GENER_
+
+_A3A 1, injH2,  ,  ,  , -12,  DAYS,_
+
+0.0, -10.0, , WATE                                    //produce water    &#x20;
+
+2.0, 1.0,  .526684E+06_, CO2                 //inject CO2, 5.356e4 enthalpy of injected CO2_
+
+_7.0,  ,  ,CLOS                                             //close well_
+
+_10.0, 2.0,  5.356e4 , H2                             // inject H2_
+
+_10.2, , ,CLOS_
+
+_10.9, -4.0,   , H2_
+
+_11.0, 2.0,  5.356e4 , H2                             // inject H2_
+
+_11.2, , ,CLOS_
+
+_11.9, -4.0,   , H2_
+
+_12.0, 2.0,  5.356e4 , H2                             // inject H2_
+
+_12.2, , ,CLOS_
+
+_12.9, -4.0,   , H2_
+
+MOP(12) must be 2 for this input_._&#x20;

@@ -34,7 +34,7 @@ $$\mathbf{f}_\beta^\kappa=-\varphi\tau_0\tau_\beta\rho_\beta d_\beta^\kappa\nabl
 
 where $$d_\beta^\kappa$$ is the molecular diffusion coefficient for component _k_ in phase $$\beta$$, and $$\tau_0 \tau_\beta$$ is the tortuosity, which includes a porous medium dependent factor $$\tau_0$$ and a coefficient that depends on phase saturation $$S_\beta$$ _,_ $$\tau_\beta=\tau_\beta(S_\beta)$$. For general two-phase conditions, the total diffusive flux is then given by
 
-$$f^\kappa \quad=\quad-\Sigma_l^\kappa\nabla\ X_l^\kappa\;-\;\Sigma_g^\kappa\nabla\ X_g^\kappa$$                                                  (4-10)
+$$f^\kappa \quad=\quad-\Sigma_l^\kappa\nabla\ X_l^\kappa\;-\;\Sigma_g^\kappa\nabla\ X_g^\kappa-\;\Sigma_o^\kappa\nabla\ X_o^\kappa$$                     (4-10)
 
 where $$\Sigma_\beta^\kappa=\varphi\tau_0\tau_\beta\rho_\beta d_\beta^\kappa$$ is an effective diffusion coefficient in phase $$\beta$$. We have used this pragmatic approach because it is not possible to formulate a model for multiphase diffusion that would be accurate under all circumstances. The basic Fick law works well for diffusion of tracer solutes that are present at low concentrations in a single-phase aqueous solution at rest with respect to the porous medium $$^{[1]}$$.
 

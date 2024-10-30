@@ -8,9 +8,9 @@ ECO2 can model the same fluid components (water, NaCl, and CO2) as modeled by TO
 
 ECO2 can represent all of the phase conditions and transitions depicted in Figure 19. It may therefore be applied to flow systems that involve both sub- and supercritical temperature and pressure conditions, as well as transitions between them. ECO2 also provides an option by treating the liquid and gas CO2 as a single phase to simplify the simulation (equivalent to TOUGH3/ECO2N).&#x20;
 
-<figure><img src="../.gitbook/assets/image (6).png" alt="" width="296"><figcaption><p>Figure 19. Possible fluid phase combinations in the system water-CO2, and transitions between them in the P-T range of ECO2. The phase designations are a - aqueous, l - liquid CO2, g - gaseous CO2. Separate liquid and gas phases of CO2 exist only at subcritical conditions. Phase combinations are identified by a numerical index that ranges from 1 to 7.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20).png" alt="" width="296"><figcaption><p>Figure 19. Possible fluid phase combinations in the system water-CO2, and transitions between them in the P-T range of ECO2. The phase designations are a - aqueous, l - liquid CO2, g - gaseous CO2. Separate liquid and gas phases of CO2 exist only at subcritical conditions. Phase combinations are identified by a numerical index that ranges from 1 to 7.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (41).png" alt="" width="425"><figcaption><p>Figure 20. Phase states of CO2</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (55).png" alt="" width="425"><figcaption><p>Figure 20. Phase states of CO2</p></figcaption></figure>
 
 ECO2 inherits all the functionalities in handling phase transitions, treatment of dissolved and solid salts, partitioning of fluid components among phases, and calculation of fluid thermophysical properties, and impact of permeability by precipitation and dissolution.  If there is any conflict of functionalities among these modules, the approaches in ECO2N V2 are adopted, or the program provides an option for user to choose.  Any calculations involved in three-phase simulation will use the approaches provided by ECO2M. Details can be found in the user manual of the previous three EOS modules:
 
@@ -118,6 +118,14 @@ The AQU ==> AQG transition will only be made when X >$$X_{aq,g}$$\* (1+FE(4)).
 
 1: do the adjustment to match NIST reference state (If you use enthalpy data from NIST Chemistry Web Book as input for source/sinks, IE(34) must be 1 ).
 
+**IE(53)**              When in 3-phase ECO2 module simulation, CO2 near the critical point is allowed: &#x20;
+
+0:   either in liquid or in gas phase, not both**.**
+
+1:    co-existing of liquid and gas phase CO2.  &#x20;
+
+
+
 **FE(1)**               parameter γ (for IE(11)=1); parameter $$\phi_r$$(for IE(11) = 2, 3)&#x20;
 
 **FE(2)**              parameter $$\Gamma$$ (for IE(11) = 2, 3)&#x20;
@@ -134,6 +142,12 @@ Temperature: 3.05 to 300.0 ($$^oC$$), divided in 150 points with a constant $$\D
 
 The default table has a total of 30000 ($$200 \times 150$$) points, Thermophysical properties at any pressure and temperature in the table given ranges can be interpolated from the table. TOUGH4 provides an option for user to define the table by input following parameters:
 
+**IE(50)**              number of the pressure points (allow 50-1000).
+
+**IE(51)**               number of the temperature points (allow 50-1000).&#x20;
+
+A reasonable CO2 property table will significantly improve simulation performance and accuracy.  The table may only need to cover the pressure and temperature range that the current model may have, but it must cover the whole CO2 saturation line. &#x20;
+
 **FE(50)**             lower bound of pressure range (in Pa). &#x20;
 
 **FE(51)**              upper bound of pressure range (in Pa). &#x20;
@@ -142,8 +156,8 @@ The default table has a total of 30000 ($$200 \times 150$$) points, Thermophysic
 
 **FE(53)**             upper bound of temperature range (in $$^oC$$).
 
-**IE(50)**              number of the pressure points (allow 50-1000).
+The partitioning of H2O and CO2 among co-existing aqueous and gas phases is calculated based on the correlations developed by Spycher and Pruess (2005) for the low temperature range (<99 $$^oC$$) and Spycher and Pruess (2010) for the high temperature range (109 to \~300 $$^oC$$).  At the transition zone, we use a cubic function to interpolate both the equilibrium mass fraction of CO2 in the aqueous phase and the equilibrium mass fraction of H2O in the gas (CO2 rich) phase. The interpolation function makes use of four parameters that are determined by the function values and the function’s first derivatives at the two end points of the interpolation range . This approach guarantees a smooth transition between the low temperature and the high temperature ranges such that both the function and its first derivative are continuous. It was found that the current approach performs better than the model parameter blending approach suggested in Spycher and Pruess (2010) in terms of numerical stability and convergence, probably because this approach avoids the troublesome calculation of the mutual solubility near 100 $$^oC$$ for both models. The default transition zone is in the range of 99\~109 $$^oC$$. TOUGH4 allows users using a narrow transition zone which may get better numerical performance, by giving the lower and upper bound of the temperature range through FE(54) and FE(55)
 
-**IE(51)**               number of the temperature points (allow 50-1000).&#x20;
+**FE(54)**             lower bound of the transition zone  temperature range (in $$^oC$$). &#x20;
 
-A reasonable CO2 property table will significantly improve simulation performance and accuracy.  The table may only need to cover the pressure and temperature range that the current model may have, but it must cover the whole CO2 saturation line. &#x20;
+**FE(55)**             upper bound of the transition zone  temperature range (in $$^oC$$).

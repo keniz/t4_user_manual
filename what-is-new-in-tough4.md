@@ -64,7 +64,15 @@ As we are using the standard distributed CSR format for storage of the matrix an
 
 ·         Additional well production or injection types
 
-Except the original types for the source/sink, the new version TOUGH support more options for well production or injection TYPE. The TYPE can be the component name, for example “CO2” means injection or production of CO2. Additional types include:  GAPP (produce gases with given bottomhole pressure), AQPP (produce aqueous phase fluid with given bottomhole pressure), OIPP (produce oil/non-aqueous phase fluid with given bottomhole pressure), GAPR(produce gas phase fluid with given production rate), AQPR(produce aqueous phase fluid with given production rate), OIPR (produce oil phase fluid with given production rate), GAIP (injection mix gases with given pressure), AQIP (injection mix aqueous fluid with given pressure), and OIIP (injection mix oil/non-aqueous phase fluid with given pressure)
+In addition to the original source/sink types, the new version of TOUGH supports more options for well production or injection types. The type can be specified using the component name, such as 'CO2' for CO2 injection or production. Additional types include GAPP for producing gas with a given bottomhole pressure, AQPP for producing aqueous phase fluid with a given bottomhole pressure, and OIPP for producing oil or non-aqueous phase fluid with a given bottomhole pressure. GAPR, AQPR, and OIPR allow production of gas, aqueous phase fluid, and oil phase fluid, respectively, based on a specified production rate. For injection operations, GAIP, AQIP, and OIIP allow injecting mixed gases, aqueous fluid, and oil or non-aqueous phase fluid, respectively, at a specified pressure. Additionally, injection or production at a specified volume rate is also supported. An alternative input for time-dependent well operation policies has been implemented as well."
+
+.         Coupling with third-party software
+
+TOUGH4 can be coupled with third-party software, such as FLAC3D and MODLICA. The coupling is achieved through file exchange or shared memory between the two applications. Coupled simulations can run on any platform where both TOUGH4 and the third-party software are compiled. A generalized module has been developed to facilitate easier integration with other third-party software in future.&#x20;
+
+.         Python data interface
+
+A Python data interface has been implemented in TOUGH4, allowing users to leverage Python functions to integrate with other software, extract specific data, and/or implement custom functions—such as relative permeability and capillary pressure—without modifying the TOUGH4 source code. This provides users with greater flexibility in controlling TOUGH4 simulations..&#x20;
 
 ·         Flexible Input formatting
 

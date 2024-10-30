@@ -17,3 +17,13 @@ Record **RADII.2**, **RADII.3**, etc.
 &#x20;                      RC(I), I = 1, NRAD
 
 RC(I)               a set of radii in ascending order.
+
+
+
+**Example**:
+
+_RADII_
+
+&#x20;_4_&#x20;
+
+_0., 0.1524, 0.3048, 1.0_

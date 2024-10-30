@@ -6,9 +6,7 @@ There is evidence that only a portion of the connected fracture network conducts
 
 &#x20;
 
-&#x20;
-
-Here,  is a positive constant depending on properties of the fracture network, and  is the effective liquid saturation given by
+&#x20;Here,  is a positive constant depending on properties of the fracture network, and  is the effective liquid saturation given by
 
 &#x20;
 
@@ -22,9 +20,7 @@ Capillary pressure and relative permeability functions are modified to account f
 
 Using the van Genuchten model, capillary pressure and liquid relative permeability are given, respectively, by
 
-&#x20;
 
-&#x20;
 
 and
 

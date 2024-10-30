@@ -2,7 +2,7 @@
 
 This example is from [EOS1 manual](https://drive.google.com/file/d/19jQ5UnMi8XPlm6PZp59NQr2p6D8Y55DZ/view?usp=drive\_link), sample 3 (rfp). The problem considers a large well field with wells arranged in a “five-spot” configuration (Figure 10-2). Because of symmetry only 1/8 of the basic pattern needs to be modeled. The grid has six rows, each containing between one and eleven elements, for a total of thirty-six volume elements; for simplicity, only a single layer of 305 m thickness is modeled. The problem specifications as given in Table 10-1 correspond to conditions that may typically be encountered in deeper zones of hot and fairly tight fractured two-phase reservoirs (Pruess and Narasimhan, 1985).
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Figure 10-2 Five-spot well pattern with grid for modeling a 1/8 symmetry domain.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Figure 10-2 Five-spot well pattern with grid for modeling a 1/8 symmetry domain.</p></figcaption></figure>
 
 
 

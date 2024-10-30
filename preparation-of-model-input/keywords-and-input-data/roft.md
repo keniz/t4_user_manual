@@ -22,6 +22,8 @@ Record **ROFT.2**
 
 A blank record closes the ROFT data block. Repeat records ROFT.l for as many connections as desired.
 
+&#x20;If IE(130)=1, diffusive flux will be written.&#x20;
+
 **Used in**: All EOS modules
 
 **Example**:

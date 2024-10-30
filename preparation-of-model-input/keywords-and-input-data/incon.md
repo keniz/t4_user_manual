@@ -46,14 +46,10 @@ _// an initial condition for EOS7 with 2 gases and brine, in two-phase condition
 
 _INCON_
 
-_A11 1, , , 3.50009259E-01, AQG_                                    &#x20;
+_A11 1, 3.50009259E-01, AQG                     // permX, permY, permZ may also be included in this line_       &#x20;
 
-_0.4201733403239E+07, 0.8115861911613E-01, 0.3072090574758E-05, 0.0\*2, 65_&#x20;
+_0.4201733403239E+07, 0.8115861911613E-01, 0.3072090574758E-05, 0.0, 65_&#x20;
 
-_// the variables are: pressure, gas saturation, gas1 mass fraction in gas phase, gas 2 mass fraction in_&#x20;
+_// the variables are: pressure, gas saturation, gas 2 mass fraction in  gas phase,_&#x20;
 
-_// gas phase, brine mass fraction and temperature._
-
-In main input FILE, additional two lots after element name for NSEQ, NADD are required for compatible with TOUGH3 input.  In INCON file, NSEQ and NADD are not required:
-
-_A11 1, 3.50009259E-01, AQG_&#x20;
+_// brine mass fraction and temperature._

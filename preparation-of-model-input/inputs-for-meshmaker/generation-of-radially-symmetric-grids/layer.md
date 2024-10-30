@@ -16,6 +16,20 @@ Record **LAYER.2**                 &#x20;
 
 &#x20;                       H(I), I = 1, NLAY
 
-H(I)                   a set of layer thicknesses, from top layer downward. By default, zero or blank entries for layer thickness will result in assignment of the last preceding non-zero entry. Assignment of a zero layer thickness, as needed for inactive layers, can be accomplished by specifying a negative value.
+H(I)                   a set of layer thicknesses, from top layer downward. Zero or blank entries for layer thickness will be neglected. Assignment of a zero layer thickness, as needed for inactive layers, can be accomplished by specifying a negative value. If more than 20 layers, input can be in multiple line.
 
-The LAYER data close the RZ2D data block. Note that one blank record must follow to indicate termination of the MESHM data block. Alternatively, keyword MINC can appear to invoke MINC-processing for fractured media (see [below](https://app.gitbook.com/o/q9ZXQz7vu1Vs1ySDfJ5L/s/s4vEX2gTEyZWPZd8id3C/\~/changes/61/preparation-of-model-input/inputs-for-meshmaker/minc-processing-for-fractured-media)).
+The LAYER data close the RZ2D data block. Note that one blank record must follow to indicate termination of the MESHM data block. Alternatively, keyword MINC can appear to invoke MINC-processing for fractured media (see [below](../minc-processing-for-fractured-media.md)).
+
+**Example:**
+
+_LAYER_
+
+_25_
+
+_1.0\*3, 2.0\*6_
+
+&#x20;_5.0\*15, -1.0_       &#x20;
+
+&#x20;_// total 25 layers, 1.0 m for the first three layer, 2.0 m for the next 6 layers,_&#x20;
+
+_//  5.0 m for layers 10-24,  and 0 m for the last layer._

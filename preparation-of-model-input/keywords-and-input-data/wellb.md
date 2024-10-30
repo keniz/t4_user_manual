@@ -68,15 +68,17 @@ As many as 4 reference elevations and temperature gradients can be inputted.
 
 If  _ActionWord_ is "REGFX", parameters for assigning known mass flow rate to a well face will be inputted.  The parameters are:&#x20;
 
-&#x20;                          REGFX, FaceName, iniTarget, TransTime, maxTarget, Nsteps
+&#x20;                          REGFX, FaceName, iniTarget, TransTime, endTarget, maxTarget, Nsteps
 
 _FaceName_       the name of a well face that the mass flow rate will apply to. It must be identical to the connection name of two elements in the wellbore.&#x20;
 
-_iniTarget_          the mass flow rate at time 0, a negative value indecates flow from Cell 1 to Cell 2 (kg/s).
+_iniTarget_          the mass flow rate at time 0, a negative value indicates flow from Cell 1 to Cell 2 (kg/s).
 
 _TransTime_      end time of flow rate transition period (s).
 
 _maxTarget_      total mass flow rate at the end of transition period (kg/s).
+
+_endTarget_      total mass flow rate for the time after transition period (kg/s).
 
 _Nsteps_               number of tabular flow rate
 

@@ -1,14 +1,16 @@
 # TIMBC
 
-**TIMBC**            permits the users to specify time-dependent Dirichlet boundary conditions. All values in this data block are read in free format.
+**TIMBC**            permits the users to specify time-dependent Dirichlet boundary conditions. All values in this data block are read in free format (be careful, this record does not compatible with TOUGH3 input). The inputs either is through a file named "timbc.dat" or through the data section following this keyword. If "timvsp.dat" exists in the working folder, data are directly read from the file and the inputs in the TIMBC section will be neglected.&#x20;
 
 Record **TIMBC.1**
 
-&#x20;                       NTPTAB
+&#x20;                       NTPTAB, T3Comp
 
 _NTPTAB_          number of elements with time-dependent boundary conditions.
 
-Record **TIMBC.2**    (be careful, this record does not compatible with TOUGH3 input)
+T3Comp          This parameter is optional. If  T3Comp="T3", the input format will be compatible with TOUGH3 input ( see TOUGH3 user manual for details), and the following input formatting will not be applied.&#x20;
+
+Record **TIMBC.2**   &#x20;
 
 &#x20;                       BEleName, NBCP, NBCPV&#x20;
 
@@ -22,13 +24,23 @@ Record **TIMBC.3**
 
 &#x20;                       TIMBCV, PGBCEL
 
-_TIMBCV_          time of primary variable _NBCPV_ at boundary element _BCELM_
+_TIMBCV_          the time when primary variable _NBCPV_ at boundary element _BCELM_ is specified.
 
-_PGBCEL_          value of primary variable _NBCPV_ at boundary element _BCELM_ at time _TIMBCV_
+_PGBCEL_          value of primary variable _NBCPV_ at boundary element _BCELM_ at time _TIMBCV._  A special case will be evoked if _PGBCEL<0.0._ Once _PGBCEL<0.0,_ the current element will return to regular element with a volume of abs(_PGBCEL),_ and will not be treated as first type boundary since time _TIMBCV_.  It is also allowed this element changes back to first type boundary again if  _PGBCEL_ become larger than 0.0 at later time.
 
-&#x20;                       Repeat TIMBC.3 for _NBCP_ times.
+The default phase state condition will be the current condition of the element. User may specify a new phase condition through a special case for NBCPV =2, by PGBCEL=:
 
-&#x20;                       Repeat records TIMBC.2, TIMBC.3 for all _NPTTAB_ elements.
+&#x20;                       0-1.0:       default phase condition.
+
+&#x20;                       10.0+sg:  two-phase condition.
+
+&#x20;                       20.0+xg:  single gas phase condition.
+
+&#x20;                      30.0+xg:  single aqueous phase condition.
+
+Repeat TIMBC.3 for _NBCP_ times.&#x20;
+
+Repeat records TIMBC.2, TIMBC.3 for all _NPTTAB_ elements.
 
 **Used in**: All EOS modules
 

@@ -4,11 +4,11 @@
 
 &#x20;Record **PARAM.1**
 
-&#x20;                       Free format for 33 parameters, or Format (2I2, 3I4, 24I1, 10X, 2E10.4, 2I5).
+&#x20;                       Free format for 34 parameters, or Format (2I2, 3I4, 24I1, 3E10.4, 2I5).
 
-&#x20;                       NOITE, KDATA, MCYC, MSEC, MCYPR, (MOP(I), I = 1, 24), TEXP, BE, SAVE\_Fq,          &#x20;
+&#x20;                       NOITE, KDATA, MCYC, MSEC, MCYPR, (MOP(I), I = 1, 24), Diffu0, TEXP, BE,         &#x20;
 
-&#x20;                       TimeS\_Fq
+&#x20;                       SAVE\_Fq,  TimeS\_Fq
 
 _NOITE_            specifies the maximum number of Newtonian iterations per time step (default is 8)
 
@@ -160,13 +160,15 @@ _MOP(23)_       (void)
 
 _MOP(24)_       determines handling of multiphase diffusive fluxes at interfaces.
 
-&#x20;                       0:         harmonic weighting of fully coupled effective multiphase                            diffusivity.
+&#x20;                       0:         harmonic weighting of fully coupled effective multiphase diffusivity.
 
 &#x20;                       1:         separate harmonic weighting of gas and liquid phase diffusivities.
 
+_DIFFU0_           base diffusion coefficient  in gas phase (not used in current version).
+
 _TEXP_               parameter for temperature dependence of gas phase diffusion coefficient.
 
-_BE_                   (optional) parameter for effective strength of enhanced vapor diffusion; if set to a non-zero value, will replace the parameter group for vapor diffusion (see Eq. (4-9).
+_BE_                   (optional) parameter for effective strength of enhanced vapor diffusion; if set to a non-zero value, will replace the parameter group for vapor diffusion (see Eq. (4-9)).
 
 SAVE\_Fq       The frequency for writing out SAVE file. SAVE file will be written every SAVE\_Fq time step.
 

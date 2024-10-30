@@ -20,6 +20,8 @@ Record **DIFFU.2**
 
 Provide a total of _NumCom_ records with diffusion coefficients for all _NumCom_ mass components.
 
+If the  inputs are negative,  the constant diffusivity formulation, $$\tau_0 \tau_\beta=S_\beta$$ will be used. Diffusivities will be taken to be the absolute values of the user inputs. See Section "[Flux Terms](../../governing-equations/flux-terms.md)" for details.
+
 **Used in**: All EOS modules, except EOS9
 
 **Example**: (gas, liq.)

@@ -112,7 +112,7 @@ Record **ROCKS.1.2**     (optional, NAD ≥ 2 only)
 
 _RP(I)_               I = 1, ..., 10 (use free format)  or 7 (use formatted input) parameters for relative permeability function ([Appendix A)](broken-reference).&#x20;
 
-Record **ROCKS.1.2.1**  (optional, IRP = 12, and use the formatted input only)
+Record **ROCKS.1.2.1**  (optional, IRP = 12 or 41, use the formatted input only)
 
 &#x20;                       Format (3E10.4)
 
@@ -130,7 +130,7 @@ _ICP_                  integer parameter to choose type of capillary pressure fu
 
 _CP(I)_               I = 1, ..., 13 (for free format) or 7 (for formatted input) parameters for capillary pressure function ([Appendix B](../../appendix/a-relative-permeability-functions/)).
 
-&#x20;Record ROCKS.1.3.1  (optional, ICP = 12, formatted input only)
+&#x20;Record ROCKS.1.3.1  (optional, ICP = 12 or 41, formatted input only)
 
 &#x20;                       Format (6E10.4)
 

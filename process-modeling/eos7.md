@@ -142,6 +142,8 @@ Table 11 Summary for EOS7
 
 EOS7 allows inputs of several optional parameters through keyword "[SELEC](../preparation-of-model-input/keywords-and-input-data/selec.md)", including:
 
+
+
 Record **SELEC.2**
 
 &#x20;                     Format (3E10.4) or free format (data separated by comma)
@@ -156,11 +158,15 @@ $$\rho_b$$                  brine density at $$(P_0. T_0) ,  kg/m^3$$           
 
 If any of these parameters is entered as zero, default values of $$P_0$$ = 1 bar, $$T_0$$= 25 ˚C, $$\rho_b$$ = 1185.1 kg/$$m^3$$ will be used. For $$P_0$$ < 0, brine properties will be assumed identical to water.
 
+Record **SELEC.3**
+
 &#x20;                     Format (3E10.4) or free format (data separated by comma)
 
 &#x20;                     $$v_1, v_2, v_3$$    (FE(9)-FE(11))
 
 coefficients for salinity correction of aqueous phase viscosity, see Eq. 7-9.
+
+**IE(23)**           Set equal to 0 to use ZEVSREAL for enthalpy of gas mixture, Set equal to 1 to use SUPST for water vapor, and ZEVSREAL for  other gases, with a weighted sum used for the mixture enthalpy.
 
 EOS7 requires definition for gases and tracers which are included in the simulation. The inputs for gas definition are by keyword "[GASES](../preparation-of-model-input/keywords-and-input-data/gases.md)", and tracer definition is by keyword "[TRACR](../preparation-of-model-input/keywords-and-input-data/tracr.md)".&#x20;
 

@@ -2,7 +2,7 @@
 
 van Genuchten function (van Genuchten, 1980)                                                                                              &#x20;
 
-$$P_{cap}\quad=\quad-P_0(\;[S^*]^{1/λ}-1)^{1-λ}$$&#x20;
+$$P_{cap}\quad=\quad-P_0(\;[S^*]^{-1/λ}-1)^{1-λ}$$&#x20;
 
 &#x20;subject to the restriction &#x20;
 
