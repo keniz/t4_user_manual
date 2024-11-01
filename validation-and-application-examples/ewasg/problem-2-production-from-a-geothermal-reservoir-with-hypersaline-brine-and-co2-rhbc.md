@@ -25,5 +25,12 @@ The problem examines production from a hypothetical geothermal reservoir with hi
 
 Fluid withdrawal causes pressures to drop near the production well. Boiling of reservoir fluid gives rise to dilution of CO2 in the gas phase and to increased concentrations of dissolved NaCl, which begins to precipitate when the aqueous solubility limit is reached. As the boiling front recedes from the well, solid precipitate fills approximately 10 % of the original void space, causing permeability to decline to approximately 28 % of its original value.&#x20;
 
-Difference to the TOUGH3/EWASG, TOUGH4/EWASG uses  a cubic equation of state (Peng-Robinson, Redlich- Kwong, or Soave-Redlich-Kwong equations of state) to calculate gas mixture density, enthalpy departure, and viscosity. Solubility of gases is calculated using chemical equilibrium approach (TOUGH3/EWASG uses Henry's law). Due to the differences in modeling approaches between TOUGH3/EWASG and TOUGH4/EWASG, some variation in simulation results is expected, though not necessarily significant. Figure 10-12 shows the comparison of simulation results of
+Difference to the TOUGH3/EWASG, TOUGH4/EWASG uses  a cubic equation of state (Peng-Robinson, Redlich- Kwong, or Soave-Redlich-Kwong equations of state) to calculate gas mixture density, enthalpy departure, and viscosity. Solubility of gases is calculated using chemical equilibrium approach (TOUGH3/EWASG uses Henry's law). Due to the differences in modeling approaches between TOUGH3/EWASG and TOUGH4/EWASG, some variation in simulation results is expected, though not necessarily significant. Figure 10-12 shows the comparison of simulation results by TOUGH3 and TOUGH4.
 
+<figure><img src="../../.gitbook/assets/output.png" alt=""><figcaption><p>Figure 10-12 Comparison of simulated pressures and temperatures at time 2.0e6 second by TOUGH3 and TOUGH4 respectively.</p></figcaption></figure>
+
+In general, the results form TOUGH3 and TOUGH4 simulation match each other very well, except slightly different near the production well. &#x20;
+
+Input files:  [rhbc\_inputs.zip](https://drive.google.com/file/d/12AxgQuMCPqQVslDaBxda2dOo7A4aJrts/view?usp=sharing)
+
+Output Files: [rhbc\_results.zip](https://drive.google.com/file/d/1R6SOJ5C235hFIh1aArl2qKZ-4F9xkG9k/view?usp=sharing)
