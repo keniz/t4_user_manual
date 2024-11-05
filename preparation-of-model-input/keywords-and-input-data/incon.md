@@ -8,7 +8,7 @@
 
 &#x20;                      ELNE, NSEQ, NADD, PORX, stateName, (perm(I), I=1,3)
 
-&#x20;                      Or Format (A3, I2, 2I5, E15.9, A3, 3E10.4) (for mesh with 5-character gird name only)
+&#x20;                      Or Format (A3, I2, 2I5, E15.9, A5, 3E10.4) (for mesh with 5-character gird name only)
 
 &#x20;                      EL, NE, NSEQ, NADD, PORX, stateName, (perm(I), I=1,3)
 
