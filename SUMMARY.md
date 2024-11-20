@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Quick Entry to Keywords for Data Input](README.md)
-* [1️⃣ INTRODUCTION](introduction/README.md)
+* [INTRODUCTION](introduction/README.md)
   * [About TOUGH](introduction/about-tough.md)
   * [TOUGH Development History](introduction/tough-development-history.md)
   * [TOUGH4 Implementation](introduction/tough4-implementation.md)
