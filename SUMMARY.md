@@ -161,7 +161,7 @@
     * [Problem 5-Steam Displacement of a Benzene-Toluene Mixture in a Laboratory Column (rbt)](validation-and-application-examples/tmvoc/problem-5-steam-displacement-of-a-benzene-toluene-mixture-in-a-laboratory-column-rbt.md)
     * [Problem 6 -Air Displacement of a NAPL from a Laboratory Column (rad)](validation-and-application-examples/tmvoc/problem-6-air-displacement-of-a-napl-from-a-laboratory-column-rad.md)
     * [Problem7-NAPL Spill in the Unsaturated Zone (r2dl)](validation-and-application-examples/tmvoc/problem7-napl-spill-in-the-unsaturated-zone-r2dl.md)
-* [8️⃣ CONCLUSION REMARKS](conclusion-remarks.md)
+* [CONCLUSION REMARKS](conclusion-remarks.md)
 * [REFERENCES](references.md)
 * [ACKNOWLEDGEMENT](acknowledgement.md)
 
