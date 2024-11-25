@@ -6,7 +6,7 @@ TOUGH4 provides more additional options through arrays IE and FE. The flexible i
 
 0:                      Output mass balance for the whole system only.
 
-\-1:                     Output mass balance for all rocks and the whole system.
+-1:                     Output mass balance for all rocks and the whole system.
 
 n (n>0):           Output mass balance for rock _n_ and the whole system.
 
@@ -90,7 +90,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1: fully consider impact of water on the CO2-rich phase thermophysical properties.
 
-\-1: ignore the impact of water on density, viscosity and enthalpy of CO2-rich phase (IE(31)=-1 is compatible with ECO2N v1.0).&#x20;
+-1: ignore the impact of water on density, viscosity and enthalpy of CO2-rich phase (IE(31)=-1 is compatible with ECO2N v1.0).&#x20;
 
 **IE(32)**             Selects decay mass for mass balance calculation.&#x20;
 
@@ -124,19 +124,19 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(52)**               Use the maximum change of primary variables as Newton iteration  convergence criteria.
 
-0:  Turn on (see [**PARAM.3**](../preparation-of-model-input/keywords-and-input-data/param.md) for details**).**
+0:  Turn on (see [**PARAM.3**](../preparation-of-model-input/keywords-and-input-data/param.md) for detail&#x73;**).**
 
 1:    Turn off          &#x20;
 
 **IE(53)**              When in 3-phase ECO2 module simulation, CO2 near the critical point is allowed: &#x20;
 
-0:   either in liquid or in gas phase, not both**.**
+0:   either in liquid or in gas phase, not bot&#x68;**.**
 
 1:    co-existing of liquid and gas phase CO2.           &#x20;
 
 **IE(54)**              In calculation of energy balance: &#x20;
 
-0:   potential energy is not included**.**
+0:   potential energy is not include&#x64;**.**
 
 1:    potential energy is included. The Z coordinates for each element in the MESH file must be elevation for using this option.
 
@@ -177,6 +177,16 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 0:  Primary variables. &#x20;
 
 1:   Changes of  the primary variables.
+
+**IE(61)**              When conduct MPI parallel computing simulations.  The model domain (mesh) must be partitioned. Different partition methods can be used:
+
+0:  METIS, multilevel k-way. &#x20;
+
+1:   METIS, multilevel recursive-bisection.
+
+2:  A simple direct method. The portioning is based on the sequence of the elements in the mesh.&#x20;
+
+3: Read from data file "_part.dat"._ The first line of data file contains three numbers: the partition subdomain number (must be equal to the MPI tasks for current simulation), edge cut number (not be used), and the total number of mesh elements (NumElem) in Format(3I10).  Following NumElem lines contain the partition number for each element in the Format(10I8).
 
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 
