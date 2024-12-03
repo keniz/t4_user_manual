@@ -36,7 +36,7 @@ Substituting Eqs. (5-1) and (5-2) into the governing Eq. (4-1), a set of first-o
 
 $$\frac{dM_n^\kappa}{dt}=\frac{1}{V_n}\; \sum_{m}{\;  A_{nm}\; F_{nm}^\kappa}\;+\; \ q_n^\kappa$$                                                                          (5-6)
 
-Time is discretized as a first-order finite difference, and the flux and sink and source terms on the right-hand side of Eq. (5-6) are evaluated at the new time level, $$t^{k+1}=t^k+\Delta t$$, to obtain the numerical stability needed for an efficient calculation of multiphase flow. This treatment of flux terms is known as “fully implicit,” because the fluxes are expressed in terms of the unknown thermodynamic parameters at time level _k_+1_,_ so that these unknowns are only implicitly defined in the resulting equations (see, e.g., Peaceman, 1977). The time discretization results in the following set of coupled nonlinear, algebraic equations
+Time is discretized as a first-order finite difference, and the flux and sink and source terms on the right-hand side of Eq. (5-6) are evaluated at the new time level, $$t^{k+1}=t^k+\Delta t$$, to obtain the numerical stability needed for an efficient calculation of multiphase flow. This treatment of flux terms is known as “fully implicit,” because the fluxes are expressed in terms of the unknown thermodynamic parameters at time level _k_+&#x31;_,_ so that these unknowns are only implicitly defined in the resulting equations (see, e.g., Peaceman, 1977). The time discretization results in the following set of coupled nonlinear, algebraic equations
 
 $$R_n^{\kappa,k+1}=M_n^{\kappa,k+1}-M_n^{\kappa,k}-\frac{\Delta t}{V_n}\{\sum_{m}{A_{nm}F_{nm}^{\kappa,k+1}}+ V_nq_n^{\kappa,k+1}\}=0$$                 (5-7)
 

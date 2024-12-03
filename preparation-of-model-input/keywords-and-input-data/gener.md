@@ -231,7 +231,7 @@ _A3A 1, injH2,  ,  ,  , -12,  DAYP,_&#x20;
 
 2.0, -10.0, , WATE                                    //produce water    &#x20;
 
-5.0, 1.0,  .526684E+06_, CO2                 //inject CO2, 5.356e4 enthalpy of injected CO2_
+5.0, 1.0,  .526684E+0&#x36;_, CO2                 //inject CO2, 5.356e4 enthalpy of injected CO2_
 
 _3.0,  ,  ,CLOS                                             //close well_
 
@@ -261,7 +261,7 @@ _A3A 1, injH2,  ,  ,  , -12,  DAYS,_
 
 0.0, -10.0, , WATE                                    //produce water    &#x20;
 
-2.0, 1.0,  .526684E+06_, CO2                 //inject CO2, 5.356e4 enthalpy of injected CO2_
+2.0, 1.0,  .526684E+0&#x36;_, CO2                 //inject CO2, 5.356e4 enthalpy of injected CO2_
 
 _7.0,  ,  ,CLOS                                             //close well_
 
@@ -283,4 +283,4 @@ _12.2, , ,CLOS_
 
 _12.9, -4.0,   , H2_
 
-MOP(12) must be 2 for this input_._&#x20;
+MOP(12) must be 2 for this inpu&#x74;_._&#x20;

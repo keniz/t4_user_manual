@@ -60,7 +60,7 @@ if –1< _CP(3)_ <0, $$\varepsilon$$ =|_CP(3)_| and use log-linear extension
 
 &#x20; _CP(4)_: _m_
 
-if zero then _m=_1-1/_CP(1)_,  else _m_=_CP(4)_ and _n=_1/(1-_m_)
+if zero then _m=_&#x31;-1/_CP(1)_,  else _m_=_CP(4)_ and _n=_&#x31;/(1-_m_)
 
 &#x20;_CP(5)_: $$T_{ref}$$
 

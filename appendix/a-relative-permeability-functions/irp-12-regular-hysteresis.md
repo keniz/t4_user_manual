@@ -24,7 +24,7 @@ _RP(2)_ = $$S_{lr}$$ : $$k_{lr}(S_{lr})$$ = 0, $$k_{rg}(S_{lr}) = k_{rgmax}$$. M
 
 &#x20;
 
-_RP(3)_ = $$S_{grmax}$$; maximum possible value of  $$S_{gr}^\Delta$$ .  Note that the present version of the code requires that  $$S_{lr}$$  + $$S_{grmax}$$ < 1, otherwise there will be saturations for which neither fluid phase is mobile, which the code cannot handle. Setting  $$S_{grmax}$$  = 0 effectively turns off hysteresis. As a special option, a constant, non-zero value of _S_gr may be employed by setting _CP(10)_>1 and making _RP(3)_ negative. The code will set  $$S_{gr}^\Delta$$  = -_RP(3)_ for all grid blocks at all times.
+_RP(3)_ = $$S_{grmax}$$; maximum possible value of  $$S_{gr}^\Delta$$ .  Note that the present version of the code requires that  $$S_{lr}$$  + $$S_{grmax}$$ < 1, otherwise there will be saturations for which neither fluid phase is mobile, which the code cannot handle. Setting  $$S_{grmax}$$  = 0 effectively turns off hysteresis. As a special option, a constant, non-zero value of _&#x53;_&#x67;r may be employed by setting _CP(10)_>1 and making _RP(3)_ negative. The code will set  $$S_{gr}^\Delta$$  = -_RP(3)_ for all grid blocks at all times.
 
 &#x20;
 

@@ -14,9 +14,9 @@ User may specify initial condition input formatting  through defining initCType 
 
 &#x20;                 “4LINES”           initial condition input for each element is in 4 lines.
 
-&#x20;                 “FM_n_L_abcd_...”  initial condition input through a special transformation. &#x20;
+&#x20;                 “F&#x4D;_&#x6E;_&#x4C;_abcd_...”  initial condition input through a special transformation. &#x20;
 
-In  “FM_n_L_abcd_...”, where "FM" is the indicator of the special transformation input; _n_L specifies the lines to be read for each element, can be 1L, 2L, 3L, or 4L; _abcd....._ represents primary variable 1,2,3 ,4 are located in the INCON file data number a, b, c, d, ......, for each element respectively. For example:
+In  “F&#x4D;_&#x6E;_&#x4C;_abcd_...”, where "FM" is the indicator of the special transformation input; _&#x6E;_&#x4C; specifies the lines to be read for each element, can be 1L, 2L, 3L, or 4L; _abcd....._ represents primary variable 1,2,3 ,4 are located in the INCON file data number a, b, c, d, ......, for each element respectively. For example:
 
 A INCON has following format:
 

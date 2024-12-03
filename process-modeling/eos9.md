@@ -22,7 +22,7 @@ Table 12 Summary for EOS9
 
 <table><thead><tr><th width="295">Specification</th><th>Parameters</th></tr></thead><tbody><tr><td>Components</td><td><p>(1) Water</p><p>(2-6) Tracer1-Tracer5 (optional)</p></td></tr><tr><td>Phase condition and its state name and index</td><td><p>(1) Unsaturated, USA </p><p>(2) Saturated, SAT </p><p></p></td></tr><tr><td>Primary variables</td><td>See <a href="../preparation-of-model-input/inputs-for-initial-conditions/eos9.md">Table 25</a></td></tr><tr><td>Optional process modeling</td><td>Wellbore simulation, and Biodegradation reactions. </td></tr></tbody></table>
 
-In EOS9, the thermophysical properties of water are taken at default reference conditions of _P =_ $$1.013\times10^5$$ Pa_, T_ = 15 ˚C. These defaults can be overwritten in a flexible manner by specifying appropriate data in a fictitious[ ROCKS](../preparation-of-model-input/keywords-and-input-data/rocks.md) domain ‘REFCO’, as follows.
+In EOS9, the thermophysical properties of water are taken at default reference conditions of _P =_ $$1.013\times10^5$$ P&#x61;_, T_ = 15 ˚C. These defaults can be overwritten in a flexible manner by specifying appropriate data in a fictitious[ ROCKS](../preparation-of-model-input/keywords-and-input-data/rocks.md) domain ‘REFCO’, as follows.
 
 &#x20;     reference pressure:         DROK of REFCO
 

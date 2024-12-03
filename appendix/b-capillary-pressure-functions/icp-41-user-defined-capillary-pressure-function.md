@@ -1,6 +1,6 @@
 # ICP=41 User-Defined capillary pressure function
 
-Users may use a capillary pressure function defined by themselves without touching the TOUGH4 source codes. The input parameters are the same as other functions through variables C_P(1)-CP(13)_ of data record [**ROCKS.1.3** and **ROCKS.1.3.1**](../../preparation-of-model-input/keywords-and-input-data/rocks.md)**.** The function must be defined in the PYTHON file: TOUGH\_python\_module.py.  A function named CapiFunction() is already included in the the PYTHON file. Users need to modify this function to their own function.   Following is the template of the function:
+Users may use a capillary pressure function defined by themselves without touching the TOUGH4 source codes. The input parameters are the same as other functions through variables &#x43;_&#x50;(1)-CP(13)_ of data record [**ROCKS.1.3** and **ROCKS.1.3.1**](../../preparation-of-model-input/keywords-and-input-data/rocks.md)**.** The function must be defined in the PYTHON file: TOUGH\_python\_module.py.  A function named CapiFunction() is already included in the the PYTHON file. Users need to modify this function to their own function.   Following is the template of the function:
 
 _**def CapiFunction(double\_array, int\_array):**_
 
@@ -24,7 +24,7 @@ _**#capillary pressure calculation parameters: CapiParam\[0-12], input through r
 
 _**#performcapillary pressure calculations at following lines:**_
 
-_**#results of capillary pressures stored in capiP\[0]:**_** :gas/aqu; capiP\[2]:gas/oil**
+_**#results of capillary pressures stored in capiP\[0]:**_**&#x20;:gas/aqu; capiP\[2]:gas/oil**
 
 &#x20;     _**return capiP**_
 

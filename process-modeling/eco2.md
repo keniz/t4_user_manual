@@ -14,11 +14,11 @@ ECO2 can represent all of the phase conditions and transitions depicted in Figur
 
 ECO2 inherits all the functionalities in handling phase transitions, treatment of dissolved and solid salts, partitioning of fluid components among phases, and calculation of fluid thermophysical properties, and impact of permeability by precipitation and dissolution.  If there is any conflict of functionalities among these modules, the approaches in ECO2N V2 are adopted, or the program provides an option for user to choose.  Any calculations involved in three-phase simulation will use the approaches provided by ECO2M. Details can be found in the user manual of the previous three EOS modules:
 
-[ECO2N user manual](https://tough.lbl.gov/assets/docs/TOUGH2\_ECO2N\_Users\_Guide.pdf)
+[ECO2N user manual](https://tough.lbl.gov/assets/docs/TOUGH2_ECO2N_Users_Guide.pdf)
 
-[ECO2M user manual](https://tough.lbl.gov/assets/docs/TOUGH2-ECO2M\_Users\_Guide.pdf)
+[ECO2M user manual](https://tough.lbl.gov/assets/docs/TOUGH2-ECO2M_Users_Guide.pdf)
 
-[ECO2N V2 user manual](https://tough.lbl.gov/assets/files/02/documentation/TOUGH2-ECO2N\_V2.0\_Users\_Guide.pdf)
+[ECO2N V2 user manual](https://tough.lbl.gov/assets/files/02/documentation/TOUGH2-ECO2N_V2.0_Users_Guide.pdf)
 
 2. **Specifications**
 
@@ -110,7 +110,7 @@ The AQU ==> AQG transition will only be made when X >$$X_{aq,g}$$\* (1+FE(4)).
 
 1: fully consider impact of water on the CO2-rich phase thermophysical properties.
 
-\-1: ignore the impact of water on density, viscosity and enthalpy of CO2-rich phase (IE(31)=-1 is compatible with ECO2N v1.0).&#x20;
+-1: ignore the impact of water on density, viscosity and enthalpy of CO2-rich phase (IE(31)=-1 is compatible with ECO2N v1.0).&#x20;
 
 **IE(34)**             Adjusts calculated CO2 enthalpy using the analytical solution by Altunin et al. (1975) to match the value from NIST Chemistry Web Book
 
@@ -120,7 +120,7 @@ The AQU ==> AQG transition will only be made when X >$$X_{aq,g}$$\* (1+FE(4)).
 
 **IE(53)**              When in 3-phase ECO2 module simulation, CO2 near the critical point is allowed: &#x20;
 
-0:   either in liquid or in gas phase, not both**.**
+0:   either in liquid or in gas phase, not bot&#x68;**.**
 
 1:    co-existing of liquid and gas phase CO2.  &#x20;
 

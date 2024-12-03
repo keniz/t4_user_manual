@@ -16,9 +16,18 @@ CO2 injections: 0.1585 kg/s in half space.
 
 The grid should be designed in such a way as to obtain “adequate” spatial resolution in regions where significant gradients occur, i.e., near the injection well, and near the shale layers. The TOUGH internal mesh maker can be used to generate the model mesh.  Mesh generation,  gravity equilibration and preparation for the other model inputs were discussed in TOUGH2/ECO2N user manual and do not repeat here. We directly use the initial conditions and boundary conditions obtained from TOUGH3 simulation which was done in accordance with the above list conditions and a salinity of 3.2 wt.-% NaCl.
 
-The main input file from the TOUGH3 simulation require minor modification for using in TOUGH4 simulation. The "MODDE" data section must be inserted (Figure 10-6).  The record MODDE1.2 have a value "ECO2N" indicating the input files (INFILE and INCON) prepared for TOUGH3/ECO2N simulation are used for current simulation. The data record MODDE3 specifies that the simulation is in isothermal mode,  does not account diffusion, includes brine, does not consider wellbore simulation, and treats both gas and supercritical CO2  as  "supercritical" phase.  In addition,  the source/sink type must change to "COM3" from "COM2" in the GENER data section. &#x20;
+The main input file from the TOUGH3 simulation require minor modification for using in TOUGH4 simulation. The "MODDE" data section must be inserted (Figure 10-6).  The record MODDE1.2 have a value "ECO2N" indicating the input files (INFILE and INCON) prepared for TOUGH3/ECO2N simulation are used for current simulation. The third data record in MODDE block specifies that the simulation is in isothermal mode,  does not account diffusion, includes brine, does not consider wellbore simulation, and treats both gas and supercritical CO2  as  "supercritical" phase.  In addition,  the source/sink type must change to "COM3" or "CO2" from "COM2" in the GENER data section, because CO2 is component 2 in TOUGH4.
 
 <figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption><p>Figure 10-6 Inputs for  "MODDE" data section </p></figcaption></figure>
 
+TOUGH3/ECO2N simulation requires a file named "CO2TAB" for providing  tabular data of density, viscosity, and specific enthalpy of pure CO2. The CO2 property values are obtained during the simulation by means of bivariate interpolation. Difference to TOUGH2/ECO2N simulation, the use of "CO2TAB" is optional in TOUGH4 simulation. If "CO2TAB" does not exist, TOUGH4 will generate the tabular data at run-time based on Altunin's correlations (1975). User may specify the pressure and temperature range and points for the tabular data through "SELEC" data section . Following is the "SELEC" input example for current simulation (Figure 10-7):
 
+<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption><p>Figure 10-7 CO2 property table definition though SELEC data input</p></figcaption></figure>
 
+The tabular pressure and temperature ranges must fully cover potential pressure and temperature range in the model domain. Current simulation is in isothermal condition (T = 37 °C ), for which only small range of temperature is needed. &#x20;
+
+The simulation results match the results from TOUGH3/ECO2N simulation very well. Discussion of the the results can be found in [TOUGH3/ECO2N user manual](https://tough.lbl.gov/assets/docs/TOUGH2_ECO2N_Users_Guide.pdf).
+
+Input Files:        Input Files &#x20;
+
+Output Files:    Output Files&#x20;

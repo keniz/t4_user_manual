@@ -16,7 +16,7 @@ The second part of this simulation consists of injecting cold water (22 °C) int
 
 **Part 3**
 
-The final part of the simulation consists of steam injection into the column. Again, the initial conditions for this part of the problem are the conditions at the end of the previous part. The file SAVE generated during the waterflood part of the simulation was placed in the input file as block INCON . During this final part of the simulation, steam with an enthalpy of $$1.562 \times 10^6$$_J/kg_ is injected at a rate of $$3.5341 \times 10^{-5}$$ kg/s for a period of 9000 s. In **MODDE** data section, simulation must be specified as  non-isothermal to include an energy balance equation. To improve the convergence behavior for current simulation, primary variable change-based convergence criteria are used (see [**PARAM.3**](../../preparation-of-model-input/keywords-and-input-data/param.md)**,** prvCR1=1000.0, prvCR2=0.01, prvCR3=0.1 in input file INFILE**).**
+The final part of the simulation consists of steam injection into the column. Again, the initial conditions for this part of the problem are the conditions at the end of the previous part. The file SAVE generated during the waterflood part of the simulation was placed in the input file as block INCON . During this final part of the simulation, steam with an enthalpy of $$1.562 \times 10^6$$_J/kg_ is injected at a rate of $$3.5341 \times 10^{-5}$$ kg/s for a period of 9000 s. In **MODDE** data section, simulation must be specified as  non-isothermal to include an energy balance equation. To improve the convergence behavior for current simulation, primary variable change-based convergence criteria are used (see [**PARAM.3**](../../preparation-of-model-input/keywords-and-input-data/param.md)**,** prvCR1=1000.0, prvCR2=0.01, prvCR3=0.1 in input file INFIL&#x45;**).**
 
 Outputs can be downloaded in following link.  After 5,000 s of steam injection, a compact NAPL bank is present in the condensation zone ahead of the steam front (grid blocks AA 39 to AA 43), demonstrating that the steam is effectively displacing the trichloroethylene. By the end of the simulation, after 9000 s of steam injection, the entire column is at the steam temperature, and the trichloroethylene has been completely removed. Simulation results agree well with those from a TOUGH3 simulation, but TOUGH3/TMVOC requires a considerably larger number of time steps for this problem.&#x20;
 
@@ -46,24 +46,24 @@ The  simulation results of current model match the results from part 3 simulatio
 
 **Part 1:**&#x20;
 
-**Input Files:**                [ INFILE\_rtcem1.zip](https://drive.google.com/file/d/1z5W-WcKulSXXMZWHx4sw7q1ASJHKgdxz/view?usp=drive\_link)
+**Input Files:**                [ INFILE\_rtcem1.zip](https://drive.google.com/file/d/1z5W-WcKulSXXMZWHx4sw7q1ASJHKgdxz/view?usp=drive_link)
 
-**Output Files:**           [ output files](https://drive.google.com/file/d/1PqaolXeKlOWK\_L2VjEgnSDh6HlfM0H7c/view?usp=drive\_link)
+**Output Files:**           [ output files](https://drive.google.com/file/d/1PqaolXeKlOWK_L2VjEgnSDh6HlfM0H7c/view?usp=drive_link)
 
 **Part 2:**
 
-**Input Files:**                [ INFILE\_rtcem2.zip](https://drive.google.com/file/d/13dt6Ah89E9HA\_NLo544ZT7Qv\_elbs20d/view?usp=drive\_link)
+**Input Files:**                [ INFILE\_rtcem2.zip](https://drive.google.com/file/d/13dt6Ah89E9HA_NLo544ZT7Qv_elbs20d/view?usp=drive_link)
 
-**Output Files:**            [output files](https://drive.google.com/file/d/1URGutpwVPtF-stjtunGSuKFKyfcdcCj2/view?usp=drive\_link)
+**Output Files:**            [output files](https://drive.google.com/file/d/1URGutpwVPtF-stjtunGSuKFKyfcdcCj2/view?usp=drive_link)
 
 **Part 3:**
 
-**Input Files:**                 [INFILE\_rtcem3.zip](https://drive.google.com/file/d/1FwpDTRaztJXqNOT7WKJ6YRqNzPtweA8U/view?usp=drive\_link)
+**Input Files:**                 [INFILE\_rtcem3.zip](https://drive.google.com/file/d/1FwpDTRaztJXqNOT7WKJ6YRqNzPtweA8U/view?usp=drive_link)
 
-**Output Files:**            [output files](https://drive.google.com/file/d/1A33npAJdfoENAyiVcm7b0DckLHJek3PZ/view?usp=drive\_link)
+**Output Files:**            [output files](https://drive.google.com/file/d/1A33npAJdfoENAyiVcm7b0DckLHJek3PZ/view?usp=drive_link)
 
 **Two-gas Simulation:**
 
-**Input Files:**                [ INFILE\_2gases.zip](https://drive.google.com/file/d/1E\_2Pk6Zk7spoiDEJiXKDH-02oAMiS36e/view?usp=drive\_link)
+**Input Files:**                [ INFILE\_2gases.zip](https://drive.google.com/file/d/1E_2Pk6Zk7spoiDEJiXKDH-02oAMiS36e/view?usp=drive_link)
 
-**Output Files:**            [output files](https://drive.google.com/file/d/1va\_c43FtMvS9ci1767OmXBi3mia1PMz2/view?usp=drive\_link)
+**Output Files:**            [output files](https://drive.google.com/file/d/1va_c43FtMvS9ci1767OmXBi3mia1PMz2/view?usp=drive_link)
