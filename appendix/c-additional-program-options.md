@@ -118,6 +118,12 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(37)**         Selection of a GPU for solving linear equations when multiple GPUs are available, default selection is number 0.
 
+**IE(38)** When running a MPI parallel simulation, if AMGCL linear solver is used, user has the option to select parallelization scheme for solving linear equations
+
+0: using MPI
+
+1: using OPENMP
+
 **IE(50)**              Number of the pressure points (allow 50-1000) in the table of CO2 thermophysical properties. (See [ECO2 process modeling](../process-modeling/eco2.md) for details)
 
 **IE(51)**               number of the temperature points (allow 50-1000) in the table of CO2 thermophysical properties.
@@ -186,7 +192,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 2:  A simple direct method. The portioning is based on the sequence of the elements in the mesh.&#x20;
 
-3: Read from data file "_part.dat"._ The first line of data file contains three numbers: the partition subdomain number (must be equal to the MPI tasks for current simulation), edge cut number (not be used), and the total number of mesh elements (NumElem) in Format(3I10).  Following NumElem lines contain the partition number for each element in the Format(10I8).
+3:  Read from data file "_part.dat"._ The first line of data file contains three numbers: the partition subdomain number (must be equal to the MPI tasks for current simulation), edge cut number (not be used), and the total number of mesh elements (NumElem) in Format(3I10).  Following NumElem lines contain the partition number for each element in the Format(10I8).
 
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 
