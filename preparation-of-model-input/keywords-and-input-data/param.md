@@ -100,7 +100,7 @@ _MOP(15)_       determines conductive heat exchange with impermeable geologic fo
 
 &#x20;                       0:         heat exchange is off.
 
-&#x20;                       1:         linear heat exchange between a reservoir and confining beds is on (for grid blocks that have a non-zero heat transfer area; see data block [ELEME](eleme.md)). Initial temperature in cap- or base-rock is assumed uniform and taken as the temperature with which the last element in data block ELEME is initialized.
+&#x20;                       1:         linear heat exchange between a reservoir and confining beds is on (for grid blocks that have a non-zero heat transfer area; see data block [ELEME](eleme.md)). Initial temperature in cap- or base-rock is assumed uniform and taken as the temperature with which the last element in data block ELEME is initialized. If a rock named "QLOSS" exists, the initial temperature can also be inputted through POR in record ROCKS.1 for this rock.&#x20;
 
 &#x20;                       2:        linear heat exchange _between a reservoir and confining beds_ is on. Initial temperature for the confining bed adjacent to an element that has a non-zero heat transfer area is taken as the temperature of that element in data block INCON.
 

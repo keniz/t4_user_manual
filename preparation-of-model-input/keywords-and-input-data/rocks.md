@@ -80,7 +80,7 @@ Other specific rock names:
 
 (2)   “GEOTH”, input reference elevation, temperature, and geothermal gradient at data lot 5, 6, and 7. This is used for wellbore simulation only.
 
-(3)   “QLOSS”, input parameters for analytical solution of radial heat exchange between fluids in a wellbore and the surrounding formation for option MOP(15)=5. Details of the parameters for input can be found at the discussion for [MOP(15)](param.md) input.&#x20;
+(3)   “QLOSS”, input parameters for analytical solution of radial heat exchange between fluids in a wellbore and the surrounding formation for option MOP(15)=5. Details of the parameters for input can be found at the discussion for [MOP(15)](param.md) input. The initial temperature of surrounding rock can be provided through POR in record ROCKS.1.&#x20;
 
 Record **ROCKS.1.1**     (optional, NAD ≥ 1 only)
 
