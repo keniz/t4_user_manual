@@ -136,9 +136,9 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(53)**              When in 3-phase ECO2 module simulation, CO2 near the critical point is allowed: &#x20;
 
-0:   either in liquid or in gas phase, not bot&#x68;**.**
+0:    co-existing of liquid and gas phase CO2.
 
-1:    co-existing of liquid and gas phase CO2.           &#x20;
+1:   either in liquid or in gas phase, not bot&#x68;**.**        &#x20;
 
 **IE(54)**              In calculation of energy balance: &#x20;
 
