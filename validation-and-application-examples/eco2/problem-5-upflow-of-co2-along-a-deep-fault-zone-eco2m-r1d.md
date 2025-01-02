@@ -14,7 +14,7 @@ TOUGH4 may require slight changes to the main input file of TOUGH3 for remaining
 
 (3) set IE(31)=-1 for ignoring the impact of water on density, viscosity and enthalpy of CO2-rich phase (same as ECO2M).
 
-In general, simulation results for TOUGH4 match results from TOUGH3 well. Slight differences at the phase transition zone may be due to using of different numerical methods.  Discussion of simulation results can be found in [TOUGH3/ECO2M user manual](https://tough.lbl.gov/assets/docs/TOUGH2-ECO2M_Users_Guide.pdf).
+In general, simulation results with TOUGH4 match results from TOUGH3 well. Slight differences at the phase transition zone may be due to using of different numerical methods.  Discussion of simulation results can be found in [TOUGH3/ECO2M user manual](https://tough.lbl.gov/assets/docs/TOUGH2-ECO2M_Users_Guide.pdf).
 
 
 

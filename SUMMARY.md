@@ -153,6 +153,7 @@
     * [Problem 3-CO2 Discharge Along a Fault Zone (ECO2N/r1dv)](validation-and-application-examples/eco2/problem-3-co2-discharge-along-a-fault-zone-eco2n-r1dv.md)
     * [Problem 4-CO2 Injection into a 2-D Layered Brine Formation (ECO2N/rtp7)](validation-and-application-examples/eco2/problem-4-co2-injection-into-a-2-d-layered-brine-formation-eco2n-rtp7.md)
     * [Problem 5-Upflow of CO2 along a Deep Fault Zone (ECO2M/r1d)](validation-and-application-examples/eco2/problem-5-upflow-of-co2-along-a-deep-fault-zone-eco2m-r1d.md)
+    * [Problem 6-Migration of a CO2 Plume in a Sloping Aquifer, Intersected by a Fault (ECO2M/rwaf)](validation-and-application-examples/eco2/problem-6-migration-of-a-co2-plume-in-a-sloping-aquifer-intersected-by-a-fault-eco2m-rwaf.md)
   * [EWASG](validation-and-application-examples/ewasg/README.md)
     * [Problem 1 - Brine Density Calculation (dnh)](validation-and-application-examples/ewasg/problem-1-brine-density-calculation-dnh.md)
     * [Problem 2 - Production from a Geothermal Reservoir with Hypersaline Brine and CO2 (rhbc)](validation-and-application-examples/ewasg/problem-2-production-from-a-geothermal-reservoir-with-hypersaline-brine-and-co2-rhbc.md)
