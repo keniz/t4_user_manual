@@ -4,7 +4,9 @@ This example is originally present as problem No. 6 in TOUGH3/ECO2N V2 user manu
 
 In ECO2 module, the partitioning of H2O and CO2 among co-existing aqueous and gas phases is calculated based on the correlations developed by Spycher and Pruess (2005) for the low temperature range (<99 $$^oC$$) and Spycher and Pruess (2010) for the high temperature range (109 to \~300 $$^oC$$). These correlations were derived from the requirement that chemical potentials of all components must be equal in different phases. TOUGH4 uses the same approach as TOUGH3/ECO2N V2 in handling the temperatures between 99 and 109 $$^oC$$, for which a cubic function is used to interpolate both the equilibrium mass fraction of CO2 in the aqueous phase and the equilibrium mass fraction of H2O in the gas (CO2 rich) phase. Numerical experiment indicates that bad convergence may be experienced for temperature at this transition zone. TOUGH4 provides a flexibility for user to define  lower and upper bound of the transition zone through [FE(54) and FE(55)](../../process-modeling/eco2.md). A narrow and reasonable transition zone may significantly improve the convergence performance. We use FE(54)=99.0 , FE(55)=99.5 (transition zone: 99.0\~99.5 $$^oC$$) for this example.&#x20;
 
-&#x20;
+The original input mesh included in TOUGH3 package for this example has a “radiant emittance” factor  of value "2" for radiative heat transfer between the connections of  mobile and immobile continuum, which is not correct for radiative heat calculation. It must be a value between 0.0 and 1.0.   Current simulation turned off the heat radiation by setting it to 0.0.&#x20;
+
+
 
 Input files:                 [Case6\_50kg\_DP.zip](https://drive.google.com/file/d/13CwQZJTWI4u6fC05xMzoni4jTTAKzOst/view?usp=drive_link)
 
