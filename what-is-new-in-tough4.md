@@ -62,6 +62,10 @@ The general approach for calculation of real-gas properties remains its original
 
 The Non-Darcy flow is simulated using Forchheimer equations. Thirteen different equations from literature for  non-Darcy flow coefficient calculation can be selected for the simulations. User defined equation for  the coefficient calculation is also allowed.  The flow system can be mixing of Darcy flow and non-Darcy flow. Only the flow in user specified rocks are treated as non-Darcy Flow.&#x20;
 
+.         Simulation of gas adsorption processes
+
+The extended Langmuir isotherm for sorbing gases, including the change in porosity associated with the sorbed gas mass has been implemented, which can be applied to the simulations of Enhanced Coal Bed Methane (ECBM) or recovery of shale gas. For example, it can be used for simulation of the CO2 adsorption onto the coal, which displaces previously sorbed methane (CH4).&#x20;
+
 ·         Linear solvers
 
 As we are using the standard distributed CSR format for storage of the matrix and right-hand side vector of the linear equation system, it is easy to call the most well-known third-party linear solvers. A function for converting CSR to BCSR is included for solvers which may get additional efficiency by using BCSR. At this moment, interfaces to the following linear solver libraries have been developed:  AMGCL, PETSC, TRILINOS, FASP, VIENNAVCL, AMGX, and ROCALUTION. These solver libraries are among the most well-known linear solvers in the public domain.  The abundant solver selections allow TOUGH users to choose the best solver for their computer platform.  These solvers include CPR-AMG preconditioner (AMGCL and FASP), which is widely recognized by people in oil/gas reservoir simulation community as the best performance preconditioner, matured MPI parallel solvers (PETSC and TRILINOS), GPU solver on PC (VIENNACL), and multiple-GPU solvers (AMGX and ROCALUTION) on supercomputers for CUDA and OPENCL respectively.
