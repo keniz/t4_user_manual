@@ -4,7 +4,7 @@
 
 Record **CBMDA.1**
 
-&#x20;                       Free format for 7 parameters, or Format(A5,2E10.4, 2I5)&#x20;
+&#x20;                       Free format for 5 parameters, or Format(A5,2E10.4, 2I5)&#x20;
 
 &#x20;                       rockName, wa, wwe, islcbm, CompNum
 
@@ -20,7 +20,7 @@ _wwe_                equilibrium moisture weight fraction
 
 &#x20;              ≠ 0 – gas storage capacity related to gas saturation.       &#x20;
 
-_CompNum_     number of mass components to be absorbed by this rock.    &#x20;
+_CompNum_     number of mass components being absorbed by this rock.    &#x20;
 
 Record **CBMDA.2**
 
@@ -36,9 +36,9 @@ _PL_                     Langmuir pressure (Pa)&#x20;
 
 _rhosrb_              Sorbed Gas Density (kg/m3)
 
-Repeat record **CBMDA.2** CompNum times for all the components for this rock. Maximum 5 components are allowed for each rock (CompNum<=5).
+Repeat record **CBMDA.2** CompNum times for all the components absorbed to this rock. Maximum 5 components are allowed for each rock (CompNum<=5).
 
-Additional sets of rock names and corresponding properties can be added.&#x20;
+Additional sets for different rocks can be added by repeating records of CBMDA.1 and CMBDA.2.&#x20;
 
 **Used in**: All EOS modules
 

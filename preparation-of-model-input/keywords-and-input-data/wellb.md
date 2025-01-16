@@ -14,7 +14,7 @@ _MaxC0_           the maximum value of the profile parameter (Cmax).
 
 _ku_                    critical Kutateladze number.
 
-_WellFrac_         well fraction.
+_WellFrac_         well screen perforation fraction.
 
 _Epson_             roughness parameter of the well wall.
 
@@ -34,7 +34,7 @@ If _ActionWord_ is a rock name, parameters for specific well section defined by 
 
 &#x20;                        RockNam&#x65;_,_ roughness, perforationF, CSArea, surFMulti, outdiam, perimeter   &#x20;
 
-_RockName    &#x74;_&#x68;e rock name for a well section to which the following 6 parameters will be applied to. The rock must be defined in the keyword "[ROCKS](rocks.md)" for a well section.&#x20;
+_RockName_    the rock name for a well section to which the following 6 parameters will be applied to. The rock must be defined in the keyword "[ROCKS](rocks.md)" for a well section.&#x20;
 
 _roughness_       roughness parameter of the well wall at this well section.
 
