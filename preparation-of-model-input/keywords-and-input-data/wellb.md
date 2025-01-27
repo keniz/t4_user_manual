@@ -28,7 +28,7 @@ Record **WELLB.2.1** （optional)
 
 &#x20;                        ActionWord, para\_1, ......, para\_n
 
-_ActionWord   a_ string which can be a rock name, "GEOTH", or "REGFX"
+_ActionWord   a_ string which can be a rock name, "GEOTH", "REGFX", or "OFFMA"
 
 If _ActionWord_ is a rock name, parameters for specific well section defined by this rock will be inputted. The parameters are:&#x20;
 
@@ -48,7 +48,7 @@ _outdiam_            wellbore outside diameter at this section
 
 _perimeter_          perimeter of the pipe at this well section
 
-If  _ActionWord_ is "GEOTH", parameters for calculation of the initial temperatures in the model domain will be inputted.   The parameters are:&#x20;
+If  _ActionWord_ is "**GEOTH**", parameters for calculation of the initial temperatures in the model domain will be inputted.   The parameters are:&#x20;
 
 &#x20;                          GEOTH, GrToAll, ref\_temp, ref\_elev1, T\_grad1 , ref\_elev2, T\_grad2, ......&#x20;
 
@@ -66,7 +66,7 @@ _T\_grad2_             temperature gradient at the elevation ref\_elev2
 
 As many as 4 reference elevations and temperature gradients can be inputted.
 
-If  _ActionWord_ is "REGFX", parameters for assigning known mass flow rate to a well face will be inputted.  The parameters are:&#x20;
+If  _ActionWord_ is "**REGFX**", parameters for assigning known mass flow rate to a well face will be inputted.  The parameters are:&#x20;
 
 &#x20;                          REGFX, FaceName, iniTarget, TransTime, endTarget, maxTarget, Nsteps
 
@@ -93,6 +93,12 @@ _rcTime_                time for mass flow rate change (s).
 _flowRate_            flow rate at the time rcTime (kg/s).
 
 Repeat data record WELLB.2.2 Nsteps times.
+
+If  _ActionWord_ is "**OFFMA**",  for input of a list of connections which link a well branch away from the main wellbore. The maximum number of connections for the list is 10.&#x20;
+
+&#x20;                          OFFMA, connection1, connection2, ...... , connection10
+
+_connectionN_   connection name of two wellbore elements.    it  must be one of the connections defined in the "CONNE" data section in MESH file.     &#x20;
 
 **Used in**: All EOS modules
 
