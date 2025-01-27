@@ -47,3 +47,42 @@ In evaluating the flow terms in Eqs. 7-41 and 7-42, subscript _ij + 1/2_ is used
 To evoke a wellbore simulation, users need to input well parameters through keyword "[WELLB](../preparation-of-model-input/keywords-and-input-data/wellb.md)" and also need to turn on the wellbore simulation through keyword "[MODDE](../preparation-of-model-input/keywords-and-input-data/modde.md)", by setting parameter _hWBM_ in record MODDE.3 to TRU&#x45;_._ In addition, the domain (rock) name for the wellbore cells must start with the letter "w" or "x", where "w" indicates normal (open) wellbore cells whereas "x" indicates the special wellbore cells either filled with porous medium or consisting of a bundle of smaller tubes. Wellbore cells are identified by the first character of their rock name ("w" or "x"). Multiple wellbores or multiple branches of a wellbore are allowed. The first cell of each wellbore must have a cell name starting with the character "#" or "\*". The wellhead section must always be defined as the first wellbore cell.&#x20;
 
 T2WELL requires input of several parameters through keyword "SELEC" which is not allowed in TOUGH4 as it may conflict with input of some EOS modules.  Input for these parameters must use keyword "WELLB". In T2WELL, input of some parameters for a specific wellbore section is through assigning special values to a ROCK associated to the section. This may not work anymore. Any parameters for a well section need to be inputted through "WELLB".  For details, users may refer to "[WELLB](../preparation-of-model-input/keywords-and-input-data/wellb.md)".  The original [T2WELL user manua](https://tough.lbl.gov/assets/docs/T2Well_ECO2N_Manual.pdf)l may also be very helpful.&#x20;
+
+In wellbore simulations , the "_ISOT"_ (see data section [CONNE](../preparation-of-model-input/keywords-and-input-data/conne.md)) is borrowed for defining some special flow conditions.&#x20;
+
+For "Elem1Elem2" well-well connection, ISOT=:
+
+&#x20;           4        flow from Elem2 to Elem1 only, no flow from Elem1 to Elem2.
+
+&#x20;           5        flow from Elem1 to Elem2 only, no flow from Elem2 to Elem1.
+
+For "Elem1Elem2" well-formation connection, ISO=:
+
+&#x20;           4        gas phase flow only, no liquid phase flow.
+
+&#x20;           5        liquid phase flow only, no gas phase flow.
+
+&#x20;           6        flow from Elem2 to Elem1 only, no flow from Elem1 to Elem2.
+
+Some options controlled by **IE** may be useful in wellbore simulation.  Their inputs are through keyword [SELEC](../preparation-of-model-input/keywords-and-input-data/selec.md).  Followings are the list of most often used options in wellbore simulations:
+
+**IE(26)**             Checks whether wellbore flow turns direction.&#x20;
+
+0: off.&#x20;
+
+1: on.
+
+**IE(28)**             Accounts for mist flow (wellbore simulation only).&#x20;
+
+0: on.&#x20;
+
+1: off.
+
+**IE(52)**               Use the maximum change of primary variables as Newton iteration  convergence criteria. This option may be sensitive to convergence behavior of wellbore simulation.
+
+<0:         Turn on (see [**PARAM.3**](../preparation-of-model-input/keywords-and-input-data/param.md) for detail&#x73;**).** Wellbore simulation may require tight criteria.
+
+\>=0:      Turn off  (default is off for wellbore simulation) &#x20;
+
+**IE(62)**               For a well-formation connection, if IE(62)>0, d1 or d2 at the wellbore side will be set to be 0.0. This option could be sensitive  for the heat exchange between wellbore and formation.&#x20;
+
