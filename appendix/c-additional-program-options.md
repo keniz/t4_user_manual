@@ -120,9 +120,9 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(38)** When running a MPI parallel simulation, if AMGCL linear solver is used, user has the option to select parallelization scheme for solving linear equations
 
-0: using MPI
+0: using OPENMP
 
-1: using OPENMP
+1: using MPI
 
 **IE(50)**              Number of the pressure points (allow 50-1000) in the table of CO2 thermophysical properties. (See [ECO2 process modeling](../process-modeling/eco2.md) for details)
 
