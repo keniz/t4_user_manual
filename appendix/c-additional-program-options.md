@@ -128,11 +128,11 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(51)**               number of the temperature points (allow 50-1000) in the table of CO2 thermophysical properties.
 
-**IE(52)**               Use the maximum change of primary variables as Newton iteration  convergence criteria.
+**IE(52)**               Use the maximum change of primary variables as Newton iteration  convergence criteria. Default is on (default is off for wellbore simulation).&#x20;
 
-0:  Turn on (see [**PARAM.3**](../preparation-of-model-input/keywords-and-input-data/param.md) for detail&#x73;**).**
+0:  Turn on (see [**PARAM.3**](../preparation-of-model-input/keywords-and-input-data/param.md) for detail&#x73;**).**&#x20;
 
-1:    Turn off          &#x20;
+1:    Turn off.          &#x20;
 
 **IE(53)**              When in 3-phase ECO2 module simulation, CO2 near the critical point is allowed: &#x20;
 
@@ -193,6 +193,14 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 2:  A simple direct method. The portioning is based on the sequence of the elements in the mesh.&#x20;
 
 3:  Read from data file "_part.dat"._ The first line of data file contains three numbers: the partition subdomain number (must be equal to the MPI tasks for current simulation), edge cut number (not be used), and the total number of mesh elements (NumElem) in Format(3I10).  Following NumElem lines contain the partition number for each element in the Format(10I8).
+
+**IE(62)**               For a well-formation connection, if IE(62)>0, d1 or d2 at the wellbore side will be set to be 0.0. This option could be sensitive  for the heat exchange between wellbore and formation (for wellbore simulation only).
+
+**IE(63)**               At two-phase flow condition in a EOS7 or EWASG simulation, the first gas component can be forced to be 0.0 mass fraction (no exist). This may help to improve the convergence performance, if first gas indeed not exist in the flow system (for EOS7 and EWASG module only).
+
+0:  off.&#x20;
+
+1:   on.&#x20;
 
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 
