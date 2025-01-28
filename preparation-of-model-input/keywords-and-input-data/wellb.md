@@ -20,7 +20,7 @@ _Epson_             roughness parameter of the well wall.
 
 _Sg1_                  parameter.
 
-_btExch_           borehole heat exchange with surrounding rocks, TRUE or FALSE.
+_btExch_           borehole heat exchange with surrounding rocks, TRUE or FALSE. If it is TRUE, the input of HeatExch  (see WELLB.2.1) for all well sections will be neglected.  &#x20;
 
 Record **WELLB.2.1** （optional)
 
