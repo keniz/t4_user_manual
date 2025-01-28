@@ -44,9 +44,9 @@ _CSArea_             cross-section area at this well section.
 
 &#x20;_surFMulti_         multipler for side surface area describing nozal effect for "x" type well at this section.
 
-_outdiam_            wellbore outside diameter at this section
+_outdiam_            if >0.0 indicating this rock represents a wellbore annulus section; the _outdiam_ value is the outside diameter of the annulus section.
 
-_perimeter_          perimeter of the pipe at this well section
+_perimeter_          User-specified perimeter of the pipe, used to account for the additional pressure loss due to complicated geometry (e.g., elbow, joint, and other non-straight pipe) by assigning a larger value. If omitted, the default perimeter (calculated based on the grid) will be used.&#x20;
 
 _HeatExch_         if _HeatExch_>0.0, the heat exchange between the well and surrounding rocks at this wellbore section will be turn on. If  _HeatExch<=_&#x30;.0, it will be turn off (default).&#x20;
 
