@@ -14,7 +14,7 @@ _MaxC0_           the maximum value of the profile parameter (Cmax).
 
 _ku_                    critical Kutateladze number.
 
-_WellFrac_         well screen perforation fraction.
+_WellFrac_        wellbore fraction in the model grid (default is 1.0,  must be <=1.0).
 
 _Epson_             roughness parameter of the well wall.
 
