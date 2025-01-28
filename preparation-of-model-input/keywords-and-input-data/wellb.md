@@ -30,11 +30,11 @@ Record **WELLB.2.1** （optional)
 
 _ActionWord   a_ string which can be a rock name, "GEOTH", "REGFX", or "OFFMA"
 
-If _ActionWord_ is a rock name, parameters for specific well section defined by this rock will be inputted. The parameters are:&#x20;
+(1)    If _ActionWord_ is a rock name, parameters for specific well section defined by this rock will be inputted. The parameters are:&#x20;
 
-&#x20;                        RockNam&#x65;_,_ roughness, perforationF, CSArea, surFMulti, outdiam, perimeter   &#x20;
+&#x20;                        RockNam&#x65;_,_ roughness, perforationF, CSArea, surFMulti, outdiam, perimeter, HeatExch   &#x20;
 
-_RockName_    the rock name for a well section to which the following 6 parameters will be applied to. The rock must be defined in the keyword "[ROCKS](rocks.md)" for a well section.&#x20;
+_RockName_    the rock name for a well section to which the following 7 parameters will be applied to. The rock must be defined in the keyword "[ROCKS](rocks.md)" for a well section.&#x20;
 
 _roughness_       roughness parameter of the well wall at this well section.
 
@@ -48,7 +48,9 @@ _outdiam_            wellbore outside diameter at this section
 
 _perimeter_          perimeter of the pipe at this well section
 
-If  _ActionWord_ is "**GEOTH**", parameters for calculation of the initial temperatures in the model domain will be inputted.   The parameters are:&#x20;
+_HeatExch_         if _HeatExch_>0.0, the heat exchange between the well and surrounding rocks at this wellbore section will be turn on. If  _HeatExch<=_&#x30;.0, it will be turn off (default).&#x20;
+
+(2)    If  _ActionWord_ is "**GEOTH**", parameters for calculation of the initial temperatures in the model domain will be inputted.   The parameters are:&#x20;
 
 &#x20;                          GEOTH, GrToAll, ref\_temp, ref\_elev1, T\_grad1 , ref\_elev2, T\_grad2, ......&#x20;
 
@@ -66,7 +68,7 @@ _T\_grad2_             temperature gradient at the elevation ref\_elev2
 
 As many as 4 reference elevations and temperature gradients can be inputted.
 
-If  _ActionWord_ is "**REGFX**", parameters for assigning known mass flow rate to a well face will be inputted.  The parameters are:&#x20;
+(3)    If  _ActionWord_ is "**REGFX**", parameters for assigning known mass flow rate to a well face will be inputted.  The parameters are:&#x20;
 
 &#x20;                          REGFX, FaceName, iniTarget, TransTime, endTarget, maxTarget, Nsteps
 
@@ -94,7 +96,7 @@ _flowRate_            flow rate at the time rcTime (kg/s).
 
 Repeat data record WELLB.2.2 Nsteps times.
 
-If  _ActionWord_ is "**OFFMA**",  for input of a list of connections which link a well branch away from the main wellbore. The maximum number of connections for the list is 10.&#x20;
+(4)    If  _ActionWord_ is "**OFFMA**",  for input of a list of connections which link a well branch away from the main wellbore. The maximum number of connections for the list is 10.&#x20;
 
 &#x20;                          OFFMA, connection1, connection2, ...... , connection10
 
