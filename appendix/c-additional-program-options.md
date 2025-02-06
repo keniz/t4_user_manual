@@ -196,11 +196,13 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(62)**               For a well-formation connection, if IE(62)>0, d1 or d2 at the wellbore side will be set to be 0.0. This option could be sensitive  for the heat exchange between wellbore and formation (for wellbore simulation only).
 
-**IE(63)**               At two-phase flow condition in a EOS7 or EWASG simulation, the first gas component can be forced to be 0.0 mass fraction (no exist). This may help to improve the convergence performance, if first gas indeed not exist in the flow system (for EOS7 and EWASG module only).
+**IE(63)**               At two-phase flow condition in a EOS7 or EWASG simulation, the first gas component can be forced to be 0.0 mass fraction (no existence). This may help to improve the convergence performance, if first gas indeed not exist in the flow system (for EOS7 and EWASG module only).
 
 0:  off.&#x20;
 
 1:   on.&#x20;
+
+**IE(64)**              For preventing oscillatory phase transitions.  A larger IE(64) value represents that, once the system transitions to a different phase, it becomes more difficult to revert to the original phase condition.   It can be in the range 1-10.   Default IE(64)=2.  &#x20;
 
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 
