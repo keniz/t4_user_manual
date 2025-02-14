@@ -76,6 +76,16 @@ Several options controlled by **IE** array may be useful in wellbore simulation.
 
 1: on.
 
+**IE(27)**             Selects calculation method for thermal conductance along wellbore (for wellbore simulation only)&#x20;
+
+0: no special treatment, in the same way as in porous media.
+
+1: ignore the conductive heat flow.
+
+2: consider conduction in well wall only.
+
+3: Fully consider conduction in fluids and well wall.&#x20;
+
 **IE(28)**             Accounts for mist flow (wellbore simulation only).&#x20;
 
 0: on.&#x20;
