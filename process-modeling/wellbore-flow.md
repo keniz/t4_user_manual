@@ -64,9 +64,11 @@ For "Elem1Elem2" well-formation connection, ISO=:
 
 &#x20;           6        flow from Elem2 to Elem1 only, no flow from Elem1 to Elem2.
 
--1 ，-2，-3   no fluid flow in this connection, but heat transfer is accounted between Elem1 to Elem2.   &#x20;
+-1 ，-2，-3   no fluid flow in this connection, but heat transfer is accounted between Elem1 to Elem2.  &#x20;
 
-Some options controlled by **IE** may be useful in wellbore simulation.  Their inputs are through keyword [SELEC](../preparation-of-model-input/keywords-and-input-data/selec.md).  Followings are a list of most often used options in wellbore simulations:
+In T2WELL simulation,  user-specified perimeter of a pipe section (two well-element connection) can be inputted through parameter "_sigx"_ in "[CONNE](../preparation-of-model-input/keywords-and-input-data/conne.md)" data section, which is used to account for the additional pressure loss due to complicated geometry (e.g., elbow, joint, and other non-straight pipe) by assigning a larger value. This input method is still acceptable, if the parameter "_perimeter"_ (in data Record [**WELLB.2.1**](../preparation-of-model-input/keywords-and-input-data/wellb.md) ) is 0.0 for the both elements of the connection.  For such a case, radiative heat transfer will be neglected for the well elements (sigx= 0.0).  We suggest use "WELLB" for the input of user-specified perimeter of pipes.&#x20;
+
+Several options controlled by **IE** array may be useful in wellbore simulation. Some of these options may help in improving the model convergence behavior.  Their inputs are through keyword [SELEC](../preparation-of-model-input/keywords-and-input-data/selec.md).  Followings are a list of most often used options in wellbore simulations:
 
 **IE(26)**             Checks whether wellbore flow turns direction.&#x20;
 
@@ -88,4 +90,4 @@ Some options controlled by **IE** may be useful in wellbore simulation.  Their i
 
 **IE(62)**               For a well-formation connection, if IE(62)>0, d1 or d2 at the wellbore side will be set to be 0.0. This option could be sensitive  for the heat exchange between wellbore and formation.&#x20;
 
-In T2WELL simulation,  user-specified perimeter of a pipe section (two well-element connection) can be inputted through parameter "_sigx"_ in "[CONNE](../preparation-of-model-input/keywords-and-input-data/conne.md)" data section, which is used to account for the additional pressure loss due to complicated geometry (e.g., elbow, joint, and other non-straight pipe) by assigning a larger value. This input method is still acceptable, if the parameter "_perimeter"_ (in data Record [**WELLB.2.1**](../preparation-of-model-input/keywords-and-input-data/wellb.md) ) is 0.0 for the both elements of the connection.  For such a case, radiative heat transfer will be neglected for the well elements (sigx= 0.0).  We suggest use "WELLB" for the input of user-specified perimeter of pipes.&#x20;
+**IE(64)**               For preventing oscillatory phase transitions.  A larger IE(64) value represents that, once the system transitions to a different phase, it becomes more difficult to revert to the original phase condition.   It can be in the range 1-10.   Default IE(64)=2.  &#x20;
