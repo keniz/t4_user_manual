@@ -40,7 +40,11 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:                       in 2 phases (treat both gas and supercritical CO2 as “gas”).  &#x20;
 
-**IE(23)**              &#x20;
+**IE(23)**              Selects enthalpy calculation method (for EOS7 and EWASG module only)
+
+0:                      water vapor and other gases are treated as real gas, and enthalpy of the mixture is calculated using the RealGas module.
+
+1:                       Enthalpy of water vapor will be calculated using the equations of IFC-1967, or IAPWS-IF97,  and enthalpy of the mixture of other gases will be calculated using RealGas module. The enthalpy of their mixture is mass fraction weighted sum of the two enthalpies (enthalpy for water vapor and for all other gases). &#x20;
 
 **IE(24)**             allows to turn vapor pressure lowering on/off. It can be overridden by specific inputs of EOS4 and EWASG module for VPL on/off option.&#x20;
 
