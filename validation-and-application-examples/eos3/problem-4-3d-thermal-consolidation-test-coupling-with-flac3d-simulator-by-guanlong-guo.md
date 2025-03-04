@@ -24,7 +24,7 @@ The material properties for the 3D thermal consolidation are given in Table 10-1
 
 _Table 10-1 Material properties for the 3D thermal consolidation test_
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Figure 10-7 compares the analytical solution with the simulations results at a monitoring point _M_ (1.2m,1.2m,1.2m). The simulation results are in good agreement with the analytical solution for temperature, pore pressure, shear stress. Slight deviations are observed in the simulation results for normal stress and displacement, as seen in Figure 10-7 (c) and (d). This difference may be attributed to the transfer of different time-stepping strategies in the simulation for enhancing computational efficiency. Using small time steps throughout the whole simulation may help prevent these discrepancy issues. In general, the TOUGH4-FLAC coupling code can accurately simulate the coupled THM problems.
 

@@ -220,7 +220,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:  Using (Ramey, 1962), not including short time solution.
 
-**IE(67)**              Two versions of function are implemented in TOUGh4 for calculating calculate the acceleration loss in a well. This function is sensitive to the convergence for some simulations.  User may select different version to achieve best performance. &#x20;
+**IE(67)**              Two versions of function are implemented in TOUGh4 for calculating the acceleration loss in a well. This function is sensitive to the convergence for some simulations.  User may select different version to achieve best performance. &#x20;
 
 0:  Newer version.&#x20;
 
