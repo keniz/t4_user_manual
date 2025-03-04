@@ -208,6 +208,24 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(64)**              For preventing oscillatory phase transitions.  A larger IE(64) value represents that, once the system transitions to a different phase, it becomes more difficult to revert to the original phase condition.   It can be in the range 1-10.   Default IE(64)=2.  &#x20;
 
+**IE(65)**              Adding small artificial friction at near zero velocity condition to gain numerical stable condition.&#x20;
+
+0:  on.&#x20;
+
+1:   off.&#x20;
+
+**IE(66)**              Two versions of function are implemented in TOUGH4 for calculating the heat loss through wellbore using analytical solution. The function is sensitive to the convergence for some non-isothermal simulations. User may select different version to achieve best performance. &#x20;
+
+0: Using (Ramey, 1962), including short time solution.
+
+1:  Using (Ramey, 1962), not including short time solution.
+
+**IE(67)**              Two versions of function are implemented in TOUGh4 for calculating calculate the acceleration loss in a well. This function is sensitive to the convergence for some simulations.  User may select different version to achieve best performance. &#x20;
+
+0:  Newer version.&#x20;
+
+1:   Older version.&#x20;
+
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 
 **IE(111)**            Selects thermodynamic formulation.

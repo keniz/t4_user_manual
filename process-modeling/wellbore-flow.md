@@ -94,7 +94,7 @@ Several options controlled by **IE** array may be useful in wellbore simulation.
 
 1: off.
 
-**IE(52)**               Use the maximum change of primary variables as Newton iteration  convergence criteria. This option may be sensitive to convergence behavior of wellbore simulation.
+**IE(52)**               Use the maximum change of primary variables as Newton iteration  convergence criteria. This option is very sensitive to convergence behavior of wellbore simulation.
 
 <0:         Turn on (see [**PARAM.3**](../preparation-of-model-input/keywords-and-input-data/param.md) for detail&#x73;**).** Wellbore simulation may require tight criteria.
 
@@ -103,3 +103,21 @@ Several options controlled by **IE** array may be useful in wellbore simulation.
 **IE(62)**               For a well-formation connection, if IE(62)>0, d1 or d2 at the wellbore side will be set to be 0.0. This option could be sensitive  for the heat exchange between wellbore and formation.&#x20;
 
 **IE(64)**               For preventing oscillatory phase transitions.  A larger IE(64) value represents that, once the system transitions to a different phase, it becomes more difficult to revert to the original phase condition.   It can be in the range 1-10.   Default IE(64)=2.  &#x20;
+
+**IE(65)**              Adding small artificial friction at near zero velocity condition to gain numerical stable condition.&#x20;
+
+0:  on.&#x20;
+
+1:   off.&#x20;
+
+**IE(66)**              Two versions of function are implemented in TOUGH4 for calculating the heat loss through wellbore using analytical solution. The function is sensitive to the convergence for some non-isothermal simulations. User may select different version to achieve best performance. &#x20;
+
+0: Using (Ramey, 1962), including short time solution.
+
+1:  Using (Ramey, 1962), not including short time solution.
+
+**IE(67)**              Two versions of function are implemented in TOUGh4 for calculating calculate the acceleration loss in a well. This function is sensitive to the convergence for some simulations.  User may select different version to achieve best performance. &#x20;
+
+0:  Newer version.&#x20;
+
+1:   Older version.&#x20;
