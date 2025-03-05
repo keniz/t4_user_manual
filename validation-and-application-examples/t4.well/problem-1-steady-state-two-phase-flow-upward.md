@@ -1,6 +1,6 @@
-# Steady-state two-phase flow upward
+# Problem 1-Steady-state two-phase flow upward
 
-This example is the first example in the user manual of T2Well/ECO2N Version 1.0. It was designed for verifying the wellbore flow solution approach through modeling the steady-state, isothermal, two-phase (CO2 as gas and water as liquid) flow in a vertical wellbore of 1000 m length.&#x20;
+This problem is from the first example in the user manual of T2Well/ECO2N Version 1.0. It was designed for verifying the wellbore flow solution approach through modeling the steady-state, isothermal, two-phase (CO2 as gas and water as liquid) flow in a vertical wellbore of 1000 m length.&#x20;
 
 The details of the problem are described below:
 
