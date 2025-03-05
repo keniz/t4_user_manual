@@ -22,9 +22,9 @@ The input  file for TOUGH4 simulation is modified from the input of T2well. Figu
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Figure 10-n TOUGH4 inputs for wellbore simulation</p></figcaption></figure>
 
-The TOUGH4 numerical solutions are almost identical to the analytical solutions (Pan et al., 2010) and the results from T2Well. Figure 10-m shows the comparison.&#x20;
+The results from TOUGH4 numerical solution are almost identical to the analytical solutions (Pan et al., 2010) and the results from T2Well. Figure 10-m shows the comparison of simulated pressure, drift velocity, gas velocity and gas saturation along the wellbore at steady-sate by T2well and T4.well.&#x20;
 
-
+<figure><img src="../../.gitbook/assets/image (81).png" alt="" width="563"><figcaption><p>Figure 10-m Comparison of simulation results. </p></figcaption></figure>
 
 **Input Files:**                 [INFILE](https://drive.google.com/file/d/1YhAEWy_3j9hWuRzFeiJwJfygNYNUOLQV/view?usp=sharing)
 
