@@ -116,7 +116,7 @@ Several options controlled by **IE** array may be useful in wellbore simulation.
 
 1:  Using (Ramey, 1962), not including short time solution.
 
-**IE(67)**              Two versions of function are implemented in TOUGh4 for calculating calculate the acceleration loss in a well. This function is sensitive to the convergence for some simulations.  User may select different version to achieve best performance. &#x20;
+**IE(67)**              Two versions of function are implemented in TOUGH4 for calculating the acceleration loss in a well. This function is sensitive to the convergence for some simulations.  User may select different version to achieve best performance. &#x20;
 
 0:  Newer version.&#x20;
 
