@@ -52,6 +52,7 @@
   * [Tracers/Decay Chain](process-modeling/tracers-decay-chain.md)
   * [Biodegradation Reaction](process-modeling/biodegradation-reaction.md)
   * [Wellbore Flow](process-modeling/wellbore-flow.md)
+  * [Non-Darcy Flow](process-modeling/non-darcy-flow.md)
 * [8️⃣ PREPARATION  OF MODEL INPUT](preparation-of-model-input/README.md)
   * [Input Formatting ](preparation-of-model-input/input-formatting.md)
   * [Keywords and Input Data](preparation-of-model-input/keywords-and-input-data/README.md)
