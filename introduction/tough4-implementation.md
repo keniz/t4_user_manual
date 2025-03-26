@@ -37,25 +37,25 @@ Table 1. Fluid property modules for TOUGH4.
 
 The present report provides a summary of the new features, discussions of the improvements in user features, data structure, software architecture, and process modeling capabilities over the previous versions. The mathematical models, numerical methods, module specific methods are discussed. This report also presents a quick start of using TOUGH4. It provides guides for compilation, installation, preparation of input files, and running simulations.  Discussion of the input file formatting is also presented, most of which remains compatible with TOUGH3.  To make this report self-contained for input file preparation, we include much of the material that was covered in the TOUGH3 user’s guide (Jung et al., 2018). Details of the mathematical models, numerical methods, module specific methods and testing examples can be found online.
 
-TOUGH4 as the latest member of the codes, it is derived from many of these codes.  The following (Table 2) lists the main codes and key contributors.
+TOUGH4, the latest addition to the TOUGH family of codes, is derived from many of its predecessors. Table 2 lists the main codes and their key contributors. TOUGH4 itself was developed by Keni Zhang.&#x20;
 
 Table 2. The most important codes that TOUGH4 is based on.
 
-| Name of the Codes | Key Contributor     | What are the contributions to TOUGH4                                                                             |
-| ----------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| TOUGH2            | Karstan Pruess      | General idea of the TOUGH simulation                                                                             |
-| TOUGH3            | Yoojin Jung         | The user features (input/output and more)                                                                        |
-| TOUGH+            | George Moridis      | Language style, data structure, and some user features                                                           |
-| TOUGH2-MP         | Keni Zhang          | MPI parallelism                                                                                                  |
-| EOS7C, EOS7CA     | Curt Odenburg       | EOS7                                                                                                             |
-| TMVOC             | Karsten Pruess      | TMVOC                                                                                                            |
-| ECO2N, ECO2M      | Karsten Pruess      | ECO2                                                                                                             |
-| ECO2N V2.0        | Lehua Pan           | ECO2                                                                                                             |
-| TMVOCBio          | Alfredo Battistelli | Biodegradation reactions                                                                                         |
-| T2Well            | Lehuan Pan          | Wellbore simulation                                                                                              |
-| ITOUGH2           | Stefan Finsterle    | Supercritical water simulation, non-Darcy's flow                                                                 |
-| TOUGH2/Hysteresis | Chris Doughty       | Hysteresis function for capillary pressure and relative permeability                                             |
-| GPSFLOW           | Keni Zhang          | Hybrid parallel computing, data structure, new TOUGH software architecture, third-party linear solver interfaces |
-| EWASG             | Alfredo Battistelli | EWASG                                                                                                            |
-|  GasEOS           |  George Moridis     | Real Gas properties for gas mixture                                                                              |
-| EOS7C-ECBM        | Stephen Webb        | Gas/tracer absorption using the extended Langmuir isotherm                                                       |
+| **Name of the Code**s | **Key Contributor** | **What are the contributions to TOUGH4**                                                                         |
+| --------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| TOUGH2                | Karstan Pruess      | General idea of the TOUGH simulation                                                                             |
+| TOUGH3                | Yoojin Jung         | The user features (input/output and more)                                                                        |
+| TOUGH+                | George Moridis      | Language style, data structure, and some user features                                                           |
+| TOUGH2-MP             | Keni Zhang          | MPI parallelism                                                                                                  |
+| EOS7C, EOS7CA         | Curt Odenburg       | EOS7                                                                                                             |
+| TMVOC                 | Karsten Pruess      | TMVOC                                                                                                            |
+| ECO2N, ECO2M          | Karsten Pruess      | ECO2                                                                                                             |
+| ECO2N V2.0            | Lehua Pan           | ECO2                                                                                                             |
+| TMVOCBio              | Alfredo Battistelli | Biodegradation reactions                                                                                         |
+| T2Well                | Lehuan Pan          | Wellbore simulation                                                                                              |
+| ITOUGH2               | Stefan Finsterle    | Supercritical water simulation, non-Darcy's flow                                                                 |
+| TOUGH2/Hysteresis     | Chris Doughty       | Hysteresis function for capillary pressure and relative permeability                                             |
+| GPSFLOW               | Keni Zhang          | Hybrid parallel computing, data structure, new TOUGH software architecture, third-party linear solver interfaces |
+| EWASG                 | Alfredo Battistelli | EWASG                                                                                                            |
+|  GasEOS               |  George Moridis     | Real Gas properties for gas mixture                                                                              |
+| EOS7C-ECBM            | Stephen Webb        | Gas/tracer absorption using the extended Langmuir isotherm                                                       |
