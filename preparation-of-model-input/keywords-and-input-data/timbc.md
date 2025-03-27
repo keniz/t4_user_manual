@@ -58,7 +58,7 @@ _2000.0, 2.0e7                    //time2, the value of 1st primary variable at 
 
 _4000.0, 2.5e7                    //time3, the value of 1st primary variable at time3_
 
-_ELEM2, 2, 4                       // 1st element name, change at 2 times, time-dependent: 4th PV_&#x20;
+_ELEM2, 2, 4                       // 2nd element name, change at 2 times, time-dependent: 4th PV_&#x20;
 
 _2000.0, 40.0                     // time1, the value of 4th primary variable at time1_
 
