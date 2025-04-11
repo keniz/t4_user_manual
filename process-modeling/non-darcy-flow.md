@@ -1,2 +1,19 @@
 # Non-Darcy Flow
 
+Flow in porous media is often governed by the Darcy's law, in which the flux is a linear function of pressure gradient.  However,  Darcy's law may not work correctly in some cases. Forchheimer \[1901] empirically found the relationship between the gradient of the water&#x20;potential _∇Φ = (∇P −ρg) \[Pa_  $$m^{-1}$$_]_ and average velocity to be:
+
+$$-\varDelta\varPhi= {\mu \over k.k_r}\bold u+\beta\rho|\bold u| \bold u$$                                                                             (7-45)
+
+where **u** \[m/s] is the average velocity, ρ \[kg m-3] is&#x20;the density, _k_ \[m2] is the absolute permeability, $$k_r$$ \[-] is the relative permeability, which is&#x20;a function of saturation, and _μ_ \[Pa s] is the dynamic viscosity.  The second term on the right-hand side of Eq. (7-45) accounts for inertial forces. On the pore&#x20;scale, as velocity increases, flow tends to locally separate from the tortuous pore walls,&#x20;leading to local vortices and countercurrent flow regimes. The coefficient _β_ \[m-1] is a function of effective permeability ( $$k.k_r$$ ), phase content (_θ =φS_ , where _φ_ is porosity and&#x20;S is the saturation of the considered fluid phase), and tortuosity ( $$\tau={L \over l}$$ , where L is the&#x20;macroscopic flow distance, and l is the length of the corresponding microscopic, tortuous flow path). This dependence indicates a transition from viscous-dominated to form-dominated&#x20;flow as the Reynolds number ( $$Re=\rho\mu\sqrt K/\mu$$ , where K is a form factor)&#x20;increases beyond a critical value. The parameter _β_ has been referred to as the non-Darcy&#x20;flow coefficient, the Forchheimer or inertial resistance coefficient, or the turbulence factor.&#x20;Note, however, that deviations from Darcy’s law are observed at Reynolds numbers that are&#x20;at least one order of magnitude smaller than those where actual turbulence occurs. We will&#x20;refer to _β_ as the non-Darcy flow coefficient, which can be written in a general,&#x20;parameterized form as follows:
+
+$$\beta=A_1\cdot{1 \over(k \cdot k_r)^{A_2}} \cdot{1 \over \theta^{A_3}}\cdot{1 \over \tau^{A_4}}$$                                                                         (7-46)
+
+Thirteen correlation models and user specified model for the non-Darcy flow coefficient have been&#x20;implemented in iTOUGH2 which are also used in TOUGH4 (see Table 16). Details can be found in Finsterle, 2016. Most of the original models were developed for single-phase&#x20;gas flow or gas flow at immobile water saturation. They are generalized here to two-phase  conditions by replacing absolute permeability _k_ with effective permeability,  $$k_{eff}=k\cdot k_r(S)$$ , and porosity _φ_ with phase content, _θ =φS_ . Moreover, it is assumed that&#x20;the Forchheimer equation applies to both liquid and gas flow. (Note that the user can&#x20;restrict its applicability to gas flow only). The appropriateness of these&#x20;extensions has not been examined.
+
+_**Table 16 Parameters for Non-Darcy Flow Coefficient β**_
+
+<div data-full-width="true"><figure><img src="../.gitbook/assets/image (82).png" alt="" width="545"><figcaption></figcaption></figure></div>
+
+Non-Darcy flow based on the Forchheimer equation is implemented in TOUGH4 according to user selection of the non-Darcy flow&#x20;coefficient model (eq. 7-46 with different parameters provided as in Table 16). The non-Darcy flow coefficient _β_ is evaluated for each gridblock in a connection, and&#x20;then averaged according to the selected weighting scheme. The quadratic Forchheimer equation (Eq. 7-45)  with given _β_ is solved for the absolute value of the&#x20;non-Darcy velocity _**u.**_
+
+The simulation of non-Darcy flow can be invoked by&#x20;providing a new data block following keyword [FORCH](../preparation-of-model-input/keywords-and-input-data/forch.md) in the main input file.

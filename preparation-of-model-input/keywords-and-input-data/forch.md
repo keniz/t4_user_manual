@@ -22,7 +22,7 @@ MFORCH      Determines interface weighting scheme for non-Darcy flow coefficient
 
 &#x20;                       MFORCH = 4: Arithmetic average&#x20;
 
-FORCH(I) I = 1, …, 6;          user-specified parameters for non-Darcy flow coefficient model (see [Table x](../../governing-equations/non-darcy-flow.md); only needed for models IFORCH = 1 and 14).
+FORCH(I) I = 1, …, 6;          user-specified parameters for non-Darcy flow coefficient model (see [Table 16](../../governing-equations/non-darcy-flow.md); only needed for models IFORCH = 1 and 14).
 
 Record FORC&#x48;**.2**
 

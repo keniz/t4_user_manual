@@ -1,6 +1,2 @@
----
-icon: '1'
----
-
-# INTRODUCTION
+# 1️⃣ INTRODUCTION
 
