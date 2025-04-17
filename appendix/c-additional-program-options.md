@@ -86,7 +86,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1: all model grid elements.
 
-**IE(30)**             Inputs the frequency for scanning the file "[Update\_Simulation\_Parameters](../preparation-of-model-input/adjustment-of-computing-parameters-at-run-time.md)" to see if this file has been updated during run time. The default frequency is 1000, which means the code will check the file every 1000 time steps.
+**IE(30)**             Inputs the frequency (in minutes) for scanning the file "[Update\_Simulation\_Parameters](../preparation-of-model-input/adjustment-of-computing-parameters-at-run-time.md)" to see if this file has been updated during run time. The default frequency is 10, which means the code will check the file every 10 minutes.
 
 **IE(31)**             Selects the effects of water on the thermophysical properties of the CO2-rich phase (for ECO2 only).&#x20;
 
@@ -225,6 +225,12 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 0:  Newer version.&#x20;
 
 1:   Older version.&#x20;
+
+**IE(68)**              Naming rules for time-series output files for observation elements or connections by FOFT, COFT and GOFT. &#x20;
+
+0:  The element name or connection will be part of the output file name (default)..&#x20;
+
+1:   The numbering of the observation element or connection will be part of the output file name .&#x20;
 
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 

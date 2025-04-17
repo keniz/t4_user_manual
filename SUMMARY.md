@@ -53,6 +53,7 @@
   * [Biodegradation Reaction](process-modeling/biodegradation-reaction.md)
   * [Wellbore Flow](process-modeling/wellbore-flow.md)
   * [Non-Darcy Flow](process-modeling/non-darcy-flow.md)
+  * [Enhanced Coal Bed Methane](process-modeling/enhanced-coal-bed-methane.md)
 * [8️⃣ PREPARATION  OF MODEL INPUT](preparation-of-model-input/README.md)
   * [Input Formatting ](preparation-of-model-input/input-formatting.md)
   * [Keywords and Input Data](preparation-of-model-input/keywords-and-input-data/README.md)
