@@ -260,7 +260,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 0: not effect.
 
-1: Turn on all smart time-stepping options  (i.e. let IE(84)-IE(88)=1).&#x20;
+1: Turn on all time-stepping options  (i.e. let IE(84)-IE(88)=1).&#x20;
 
 **IE(84)**           If maximum residual increases in three consecutive iterations, cut time-step size.&#x20;
 
@@ -268,7 +268,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1: On           &#x20;
 
-**IE(85)**           If maximum residual no change in in three consecutive iterations, cut time-step size.&#x20;
+**IE(85)**           If maximum residual no change in three consecutive iterations, cut time-step size.&#x20;
 
 0: Off.
 
