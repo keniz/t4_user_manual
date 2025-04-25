@@ -226,7 +226,7 @@ _DFAC_              increment factor for numerically computing derivatives (defa
 
 _FOR_                weighing factor determining the level of implicitness (default =1.0).
 
-_AMRES_           Not be used in TOUGH4
+_AMRES_           maximum permissible residual during the Newtonian iteration. If a residual larger than AMRES is encountered, time step will automatically be reduced (default= $$10^8$$).&#x20;
 
 _prvCR1_           convergence criterion for primary variable change, pressure (default=100.0).
 

@@ -232,6 +232,66 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:   The numbering of the observation element or connection will be part of the output file name .&#x20;
 
+**IE(79)**             Output of simulation results can be sent to the Python interface. User can access these data through a python function. Three default parameters to be sent are saturations for all phases (parameter1), mass fraction of all components in all phases (parameter3), and pressure for all phases(parameter3). See Python function "_UserDefinedELOutput_" (TOUGH\_python\_module.py) for details. &#x20;
+
+0: Off, no simulation results be sent to Python interface
+
+1: On, turn on the Python interface for the output data.&#x20;
+
+**IE(80)**             User may send different parameter other than the default one  (see **IE(79)**) to Python interface . the first parameter (Parameter1) is:  &#x20;
+
+0: default parameter,  saturations for all phases.
+
+2-8:  2-viscosity for all phases ; 3-density for all phases; 4- enthalpy for all phases; 5-capillary pressures; 6-temperature; 7-mass fraction of all components in all phases; 8-pressure for all phase.&#x20;
+
+**IE(81)**             User may send different parameter other than the default one  (see **IE(79)**) to Python interface . the second parameter (Parameter2) is:  &#x20;
+
+0: default parameter,  mass fraction of all components in all phases.
+
+1-6, 8:  1- saturation for all phases; 2-viscosity for all phases ; 3-density for all phases; 4- enthalpy for all phases; 5-capillary pressures; 6-temperature; 8-pressure for all phase.&#x20;
+
+**IE(82)**             User may send different parameter other than the default one  (see **IE(79)**) to Python interface . the third parameter (Parameter3) is:  &#x20;
+
+0: default parameter,  pressure for all phases.
+
+1-7:  1- saturation for all phases; 2-viscosity for all phases ; 3-density for all phases; 4- enthalpy for all phases; 5-capillary pressures; 6-temperature; 7-mass fraction of all components in all phases.&#x20;
+
+**IE(83)**             Management of options for smart time-stepping.
+
+0: not effect.
+
+1: Turn on all smart time-stepping options  (i.e. let IE(84)-IE(88)=1).&#x20;
+
+**IE(84)**           If maximum residual increases in three consecutive iterations, cut time-step size.&#x20;
+
+0: Off.
+
+1: On           &#x20;
+
+**IE(85)**           If maximum residual no change in in three consecutive iterations, cut time-step size.&#x20;
+
+0: Off.
+
+1: On     &#x20;
+
+**IE(86)**           If residuals large than 1000.0 in three consecutive iterations, cut time-step size.&#x20;
+
+0: Off.
+
+1: On     &#x20;
+
+**IE(87)**           If residuals swing in four consecutive iterations, cut time-step size.&#x20;
+
+0: Off.
+
+1: On     &#x20;
+
+**IE(88)**           If maximum residual is large than a given criteria (AMRES, [ **PARAM.3**](../preparation-of-model-input/keywords-and-input-data/param.md)), cut time-step size.&#x20;
+
+0: Off.
+
+1: On     &#x20;
+
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 
 **IE(111)**            Selects thermodynamic formulation.
