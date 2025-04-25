@@ -228,11 +228,17 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(68)**              Naming rules for time-series output files for observation elements or connections by FOFT, COFT and GOFT. &#x20;
 
-0:  The element name or connection will be part of the output file name (default)..&#x20;
+0:  The element name or connection will be part of the output file name (default).
 
-1:   The numbering of the observation element or connection will be part of the output file name .&#x20;
+1:   The numbering of the observation element or connection will be part of the output file name.
 
-**IE(79)**             Output of simulation results can be sent to the Python interface. User can access these data through a python function. Three default parameters to be sent are saturations for all phases (parameter1), mass fraction of all components in all phases (parameter3), and pressure for all phases(parameter3). See Python function "_UserDefinedELOutput_" (TOUGH\_python\_module.py) for details. &#x20;
+**IE(69)**              In many simulations, model has an initial condition of  pressure distribution with gravity equilibrium and  temperature distribution with given temperature gradients. For such a case, the pressure and temperature at any elements can be estimated from the pressure and temperature at  reference level together with the z coordinate (elevation), fluid density and geothermal  temperature gradients. User can perform the initial pressure and temperature calculation through a Python function at run-time (see _iniCondition_ in TOUGH\_python\_module.py). Other primary variables can also be assigned  values in the Python function. This option can be used to set up initial INCON file (run the simulation for one  time step with tiny time-step size).&#x20;
+
+0: no Python function for initial condition calculation is called.&#x20;
+
+1:  turn on the Python interface to the function for initial condition calculation.&#x20;
+
+**IE(79)**             Simulation results can be sent to the Python interface. User can access these data through a python function. Three default parameters to be sent are saturations for all phases (parameter1), mass fraction of all components for all phases (parameter3), and pressure for all phases(parameter3). See Python function "_UserDefinedELOutput_" (TOUGH\_python\_module.py) for details. &#x20;
 
 0: Off, no simulation results be sent to Python interface
 

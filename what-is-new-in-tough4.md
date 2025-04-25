@@ -80,7 +80,7 @@ TOUGH4 can be coupled with third-party software, such as FLAC3D and MODLICA. The
 
 .         Python data interface
 
-A Python data interface has been implemented in TOUGH4, allowing users to leverage Python functions to integrate with other software, extract specific data, and/or implement custom functions—such as relative permeability and capillary pressure—without modifying the TOUGH4 source code. This provides users with greater flexibility in controlling TOUGH4 simulations..&#x20;
+A Python data interface has been implemented in TOUGH4, allowing users to leverage Python functions to integrate with other software, extract specific data, setup initial conditions and/or implement custom functions—such as relative permeability and capillary pressure—without modifying the TOUGH4 source code. This provides users with greater flexibility in controlling TOUGH4 simulations..&#x20;
 
 ·         Flexible Input formatting
 
