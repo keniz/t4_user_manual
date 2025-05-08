@@ -280,7 +280,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1: On     &#x20;
 
-**IE(86)**           If residuals large than 1000.0 in three consecutive iterations, cut time-step size.&#x20;
+**IE(86)**           If residuals large than 1000.0, or  large than FE(86), if FE(86) is not 0, in three consecutive iterations, cut time-step size.&#x20;
 
 0: Off.
 
@@ -347,5 +347,7 @@ FE(57) is for first model component (water or water vapor) density at STP. TOUGH
 **FE(71)**             User specified  standard pressure (in _Pa_) It is required only when **IE(56)**=3.
 
 **FE(72)**            The highest pressure allowed in a TOUGH simulation is 1.0e8 Pa. A higher pressure may still work for some EOS modules. If user want to rise the high-pressure limitation, FE(72) can be used for setting the new high-pressure limitation. It must be in the range 1.0e8-1.0e9.&#x20;
+
+**FE(86)**            User defined maximum residual criteria used with option of IE(86) for cutting time-step size, see IE(86). &#x20;
 
 **FE(100)**          When Jacobian matrix has zero diagonal term, we need to add tiny digit ( $$\epsilon$$) to it to avoid numerical error in inversion of diagonal submatrix. $$\epsilon$$ may have magic effect on solving the linear equations for some problems.   The default $$\epsilon =10.0^{-200}$$.  The $$\epsilon$$ will be assigned a value $$10.0^{FE(100)}$$, if FE(100)<=-50 and FE(100)>=-300.
