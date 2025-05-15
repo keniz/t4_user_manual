@@ -69,6 +69,7 @@
     * [ENDCY](preparation-of-model-input/keywords-and-input-data/endcy.md)
     * [ENDFI](preparation-of-model-input/keywords-and-input-data/endfi.md)
     * [FLAC](preparation-of-model-input/keywords-and-input-data/flac.md)
+    * [FNIST](preparation-of-model-input/keywords-and-input-data/fnist.md)
     * [FOFT](preparation-of-model-input/keywords-and-input-data/foft.md)
     * [FORCH](preparation-of-model-input/keywords-and-input-data/forch.md)
     * [GASES](preparation-of-model-input/keywords-and-input-data/gases.md)

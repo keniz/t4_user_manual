@@ -1,8 +1,8 @@
 # FORCH
 
-FORCH           Invokes flow calculation according to the Forchheimer equation; introduces information on non-Darcy flow coefficient model and weighting scheme.
+**FORCH**           Invokes flow calculation according to the Forchheimer equation; introduces information on non-Darcy flow coefficient model and weighting scheme.
 
-Record FORC&#x48;**.1**
+Record **FORCH.1**
 
 &#x20;                       Free format for 7 parameters, or FORMAT (2I5, 6E10.4)
 

@@ -46,8 +46,10 @@ EOS6 simulation requires definition of the gas component through input keyword "
 
 <figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption><p>Figure 18. Thermophysical property data for the selected gas at given temperature </p></figcaption></figure>
 
-(5). Repeat step (3) and (4) to download the data file for different temperatures, e.g. for temperature=8, 11, 14, ...., 150 $$^oC$$, get files 8.dat, 11.dat, 14.dat, ......, 150.dat. The increment of temperature can be different. Combine the downloaded files into a single file "gas\_properties.dat" in the sequence of increasing temperature.  The first two lines (headers and units) in the downloaded files must be deleted except the first file.
+(5). Repeat step (3) and (4) to download the data file for different temperatures, e.g. for temperature=8, 11, 14, ...., 150 $$^oC$$, get files 8.dat, 11.dat, 14.dat, ......, 150.dat. The increment of temperature can be different. Combine the downloaded files into a single file "gas\_properties.dat" in the sequence of increasing temperature.  The first two lines (headers and units) in the downloaded files can be deleted except the first file.
 
 The format of the file "gas\_properties.dat" is ready to be read by TOUGH4. Users can use this file directly in the EOS6 simulations. You are welcome to share the "gas\_properties.dat" with other EOS6 users.
 
 Gas properties from other sources are also allowed. It is required to include at least the 5 essential columns (temperature, pressure, density, enthalpy, viscosity). The data file must use the same headers and units as the downloaded NIST data file and all data are separated by spaces. &#x20;
+
+TOUGH4 provides a Pyhthon interface which can perform fetching the thermophysical property data automatically, see [FNIST](../preparation-of-model-input/keywords-and-input-data/fnist.md) input for details. In addition, user can also user a Python program (NIST\_fluidProperties\_fetch.py, included in the TOUGH4 distribution package) to automatically create the file "gas\_properties.dat".&#x20;
