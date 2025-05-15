@@ -52,4 +52,4 @@ The format of the file "gas\_properties.dat" is ready to be read by TOUGH4. User
 
 Gas properties from other sources are also allowed. It is required to include at least the 5 essential columns (temperature, pressure, density, enthalpy, viscosity). The data file must use the same headers and units as the downloaded NIST data file and all data are separated by spaces. &#x20;
 
-TOUGH4 provides a Pyhthon interface which can perform fetching the thermophysical property data automatically, see [FNIST](../preparation-of-model-input/keywords-and-input-data/fnist.md) input for details. In addition, user can also user a Python program (NIST\_fluidProperties\_fetch.py, included in the TOUGH4 distribution package) to automatically create the file "gas\_properties.dat".&#x20;
+TOUGH4 provides a Pyhthon interface which can perform fetching the thermophysical property data automatically, see [FNIST](../preparation-of-model-input/keywords-and-input-data/fnist.md) input for details. In addition, user can also use a Python program (NIST\_fluidProperties\_fetch.py, included in the TOUGH4 distribution package) to automatically create the file "gas\_properties.dat".&#x20;
