@@ -20,7 +20,7 @@ The specifications of the one-dimensional model are:
 
 The input  file for TOUGH4 simulation is modified from the input of T2well. Figure 10-n shows the main changes in the file, including two new data sections ([MODDE](../../preparation-of-model-input/keywords-and-input-data/modde.md) and [WELLB](../../preparation-of-model-input/keywords-and-input-data/wellb.md)). The option IE(52)=-1 forces using change of the primary variables as convergence criteria  for Newton iteration , which is very helpful in improving model convergence behavior. T2Well reached steady-state requires  4100 steps for this example, but T4Well needs only 174 steps to obtain the same results.    IE(67)=1 is for selecting the same function as in T2Well/ECO2N Version 1.0  for the calculation of the acceleration loss.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Figure 10-n TOUGH4 inputs for wellbore simulation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Figure 10-n TOUGH4 inputs for wellbore simulation</p></figcaption></figure>
 
 The results from TOUGH4 numerical solution are almost identical to the analytical solutions (Pan et al., 2010) and the results from T2Well. Figure 10-m shows the comparison of simulated pressure, drift velocity, gas velocity and gas saturation along the wellbore at steady-sate by T2well and T4.well.&#x20;
 

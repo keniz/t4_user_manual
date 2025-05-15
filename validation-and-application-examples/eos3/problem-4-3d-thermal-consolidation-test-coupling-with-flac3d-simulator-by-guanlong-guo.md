@@ -18,17 +18,17 @@ Once the coupled TH process reaches equilibrium, the equivalent pore pressure is
 
 The thermal consolidation problem in this section assumes a point heat source buried in a saturated porous media. The analytical solution of the thermal consolidation problem is referenced in (Booker & Savvidou, 1985; Xu et al., 2020). Figure 10-6 presents the geometry and meshing strategy of the simulation domain. Due to the symmetric property, the domain below (50m × 50m× 50m) accounts for 1/8 of the entire domain. A heat source, 50 _J/s_, is applied to the element at the center of the whole domain, i.e. the element at the left-bottom corner of the domain in Figure 10-6. The initial isotropic stress is -0.1 _MPa_. The initial pore pressure is 0.1 _MPa_. The initial temperature is 25 °C. Roller boundaries are applied to the symmetric boundaries, while the other boundaries are subject to a compressive stress, -0.1 _MPa._ No flux boundary is applied to the symmetric boundaries and a constant pressure (0.1 _MPa_) is applied to the other boundaries.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Figure 10-6 X-Z cross-section of the 3D simulation domain</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Figure 10-6 X-Z cross-section of the 3D simulation domain</p></figcaption></figure>
 
 The material properties for the 3D thermal consolidation are given in Table 10-1.
 
 _Table 10-1 Material properties for the 3D thermal consolidation test_
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Figure 10-7 compares the analytical solution with the simulations results at a monitoring point _M_ (1.2m,1.2m,1.2m). The simulation results are in good agreement with the analytical solution for temperature, pore pressure, shear stress. Slight deviations are observed in the simulation results for normal stress and displacement, as seen in Figure 10-7 (c) and (d). This difference may be attributed to the transfer of different time-stepping strategies in the simulation for enhancing computational efficiency. Using small time steps throughout the whole simulation may help prevent these discrepancy issues. In general, the TOUGH4-FLAC coupling code can accurately simulate the coupled THM problems.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Figure 10-7 Comparison between simulated results with analytical solutions</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Figure 10-7 Comparison between simulated results with analytical solutions</p></figcaption></figure>
 
 
 

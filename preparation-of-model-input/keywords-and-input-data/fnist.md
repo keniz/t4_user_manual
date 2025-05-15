@@ -117,6 +117,6 @@ Followings are the index of gases/fluids  that are included in  [NIST Chemistry 
 
 _FNIST_
 
-_36, 0.1,  80., 0.1, 30.,  50., 5.0_           &#x20;
+_36, 0.1,  80., 0.5, 30.,  50., 5.0_           &#x20;
 
 &#x20;_//obtained Argon thermophysical property data for pressure range 0.1-80Mpa, temperature range 30-50&#x20;_<sup>_o_</sup>_C._&#x20;
