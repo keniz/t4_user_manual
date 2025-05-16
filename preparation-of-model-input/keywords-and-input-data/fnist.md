@@ -1,8 +1,8 @@
 # FNIST
 
-Running a simulation with EOS6 requires thermophysical properties (density, viscosity, enthalpy, ...... ) of the gas component which are stored in a file named "gas\_properties.dat".  User may create this file manually through downloading the thermophysical property data for a requested gas (see [Section 7-EOS6-subsection 3](../../process-modeling/eos6.md) for details).  If a simulation is run with an executable which includes Python interface, TOUGH4 can automatically fetch these data  from  [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/fluid/) and create the file "gas\_properties.dat".  FNIST is used for specifying the parameters required for fetching data from the NIST web site.&#x20;
+Running a simulation with EOS6 requires thermophysical properties (density, viscosity, enthalpy, ...... ) of the gas component which are stored in a file named "gas\_properties.dat".  User may create this file manually through downloading the thermophysical property data for a requested gas (see [Section 7-EOS6-subsection 3](../../process-modeling/eos6.md) for details).  If a simulation is run with an executable which includes Python interface, TOUGH4 can automatically fetch these data  from  [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/fluid/) and create the file "gas\_properties.dat".  FNIST is used to specify the parameters required for fetching data from the NIST web site.&#x20;
 
-FNIST is originally designed for EOS6 simulation. User may also use it for getting fluid property data for model validation of other EOS modules.&#x20;
+FNIST was originally designed for EOS6 simulation. User may also use it to get fluid property data for model validation of other EOS modules.&#x20;
 
 **FNIST**           Introduces parameters for fetching thermophysical property data of a specific gas from  NIST Chemistry WebBook. The property data are fetched for given pressure and temperature conditions in user specified pressure and temperature range.&#x20;
 
@@ -14,19 +14,19 @@ Record **FNIST.1**
 
 GasIndex       Index of the gas. User may find it from the list at the bottom of this page. &#x20;
 
-&#x20;P\_Begin         Begining of the  pressure range , in MPa.&#x20;
+&#x20;P\_Begin         Beginning of the  pressure range , in MPa.&#x20;
 
 &#x20;P\_end             ending of the  pressure range, P\_end  must be large than P\_Begin, in MPa.&#x20;
 
 &#x20;dP                   The pressure increment, in MPa.
 
-&#x20;T\_Begin         Begining of the  temperature range , in <sup>o</sup>C.&#x20;
+&#x20;T\_Begin         Beginning of the  temperature range , in <sup>o</sup>C.&#x20;
 
 &#x20;T\_end             ending of the  temperature range, T\_end  must be large than T\_Begin, in <sup>o</sup>C.&#x20;
 
 &#x20;dT                    The temperature increment, in <sup>o</sup>C.
 
-Fetching data from NIST website could be slow. User may only request the pressure and temperature range that can fully cover the pressure and temperature of current simulation. The pressure and temperature  increment must be reasonable. It is suggested to limit the dimension of table large than 1000, (P\_end-P\_begin)/dP<1000 and (T\_end-T\_begin)/dT<1000.&#x20;
+Fetching data from NIST website could be slow. User may only request the pressure and temperature range that can fully cover the pressure and temperature of current simulation. The pressure and temperature  increment must be reasonable. It is suggested to limit the dimension of table less than 1000, (P\_end-P\_begin)/dP<1000 and (T\_end-T\_begin)/dT<1000.&#x20;
 
 The data fetching will be performed at first run only. If "gas\_properties.dat" is already exist in the working directory, the fetching process will be skipped.&#x20;
 
@@ -119,4 +119,4 @@ _FNIST_
 
 _36, 0.1,  80., 0.5, 30.,  50., 5.0_           &#x20;
 
-&#x20;_//obtained Argon thermophysical property data for pressure range 0.1-80Mpa, temperature range 30-50&#x20;_<sup>_o_</sup>_C._&#x20;
+&#x20;_//obtained Argon thermophysical property data for pressure range 0.1-80Mpa, temperature range 30-50&#x20;_<sup>_o_</sup>_C with increment 0.4Mpa and 5.0 &#x20;_<sup>_o_</sup>_C, respectively._
