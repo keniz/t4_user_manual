@@ -21,9 +21,9 @@ _**def RelpFunction(double\_array, int\_array):**_&#x20;
 
 _**#perform relative permeability calculations at following lines:**_
 
-_**#results of relative permeabilities stored in relpm\[0]:**_
+_**#results of relative permeabilities stored in**_&#x20;
 
-_**#gas phase; relpm\[1]:aqueous phase; relpm(2): oil phase**_
+_**#relpm\[0]: gas phase; relpm\[1]:aqueous phase; relpm(2): oil phase**_
 
 &#x20;     _**return relpm**_
 

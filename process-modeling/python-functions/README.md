@@ -1,0 +1,5 @@
+# Python Functions
+
+TOUGH4 provides an option to include a Python interface. Users can fetch and/or send data from/to TOUGH4 main program through the interface during runtime.  User can define his own specific functions for TOUGH4, prepare model inputs, and process the output data using the Python functions.  Several functions/templates have been developed for some important tasks. These functions/templates are stored in a file named "TOUGH\_python\_module.py" which is included in TOUGH4 distribution package. If user wants to turn on the Python interface, this file must be copied to the directory where TOUGH4 executable is located.&#x20;
+
+Current version of TOUGH\_python\_module.py provides functions for  coupling with Flac3D, coupling with Modelica, relative permeability function, capillary pressure function, initial condition calculation, fetching output data,  and fetching thermophysical property data from from NIST Chemistry WebBook. Some template functions may require user to implement the Python codes for his own task or develop new functionalities. &#x20;
