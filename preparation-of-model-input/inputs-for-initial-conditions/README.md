@@ -16,9 +16,9 @@ User may specify initial condition input formatting  through defining initCType 
 
 &#x20;                 “F&#x4D;_&#x6E;_&#x4C;_abcd_...”  initial condition input through a special transformation. &#x20;
 
-In  “F&#x4D;_&#x6E;_&#x4C;_abcd_...”, where "FM" is the indicator of the special transformation input; _&#x6E;_&#x4C; specifies the lines to be read for each element, can be 1L, 2L, 3L, or 4L; _abcd....._ represents primary variable 1,2,3 ,4 are located in the INCON file data number a, b, c, d, ......, for each element respectively. For example:
+In  “F&#x4D;_&#x6E;_&#x4C;_abcd_...”, where "FM" is the indicator of the special transformation input; _&#x6E;_&#x4C; specifies the lines to be read for each element, can be 1L, 2L, 3L, or 4L; _abcd....._ represents primary variable 1,2,3,4...... are located in the INCON file data number a, b, c, d, ......, for each element respectively. If any of the a, b, c, d, ...... is zero, the corresponding primary variable will be 0.0. For example:
 
-A INCON has following format:
+A INCON has following input:
 
 _**A00001**_
 
@@ -32,6 +32,6 @@ _**Pg,  Sg/Xg1, Xg2, Xg3, xtr1, Temperature**_
 
 If the INCON file is used for current simulation,  initCType must have a value "FM1L123468".
 
-If current simulation will include a new gas (gas 4)  and its mass fractions are all initialized as 0.0 (primary variables: _**Pg, Sg/Xg1,  Xg2,  Xg3,  Xg4,  xtr1, Temperature)**_ , the initCType must have a value "FM1234068"&#x20;
+If current simulation will include a new gas (gas 4)  and its mass fractions are all initialized as 0.0 (primary variables: _**Pg, Sg/Xg1,  Xg2,  Xg3,  Xg4,  xtr1, Temperature**_) , the initCType must have a value "FM1L1234068".&#x20;
 
 The initial conditions of different EOS modules are summarized below. The maximum number of tracers or salts is 5. The following discussion covers a smaller number of tracers or salts, but it applies to any number of them.
