@@ -42,7 +42,7 @@ Parameters for calculation of Henry's constant are inputted through the array _b
 
 (1)   _SolCM_=0
 
-Default _hc=_ _1.0e-10. If b(0)>0.0, hc=b(0)\*1.0e-10._&#x20;
+Default _hc=_ _1.0e10_ (Pa)_. If b(0)>0.0, hc=b(0)\*1.0e10._&#x20;
 
 (2)   _SolCM_=1
 
@@ -50,7 +50,7 @@ See Appendix E for details.
 
 _(3)   SolCM=2_
 
-$$hc=\dfrac{1.0}{(b_1+b_2t+b_3t^2+b_4t^3+b_5t^4+b_6t^5+b_7t^6+b_8t^7)*101325}$$                                        (8-2)
+$$hc=(b_1+b_2t+b_3t^2+b_4t^3+b_5t^4+b_6t^5+b_7t^6+b_8t^7)*101325$$                                        (8-2)
 
 _where_ $$b_i=b(i)$$&#x20;
 
@@ -74,7 +74,7 @@ _b(1)=-6_: _hc=b(0)\*hc\_AIR_.
 
 _(4)   SolCM=3_
 
-$$hc=10^{-6}*e^{-(b_1+b_2*tk+b_3/tk+b_4*log(tk))}$$                                                                                          (8-3)
+$$hc=10^{6}*e^{(b_1+b_2*tk+b_3/tk+b_4*log(tk))}$$                                                                                          (8-3)
 
 _where bi=b(i)_
 

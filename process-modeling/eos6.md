@@ -10,11 +10,11 @@ Solubility of gas in liquid water is represented by Henry's law (see Eq. 7-2). T
 
 (2) Use equation (Cramer,1982):
 
-$$K_h=\dfrac{1}{(b_1+b_2T+b_3T^2+b_4T^3+b_5T^4+b_6T^5+b_7T^6+b_8T^7)*101325.0}$$               (7-5)
+$$K_h=(b_1+b_2T+b_3T^2+b_4T^3+b_5T^4+b_6T^5+b_7T^6+b_8T^7)*101325.0$$               (7-5)
 
 (3) Use equation (Damore and Truesdell, 1988):
 
-$$K_h=10.0^{-6}e^{-(b_1+b_2/T+b_3*log(T))}$$                                                                                             (7-6)
+$$K_h=10.0^{6}e^{(b_1+b_2/T+b_3*log(T))}$$                                                                                             (7-6)
 
 For input of the constant parameters ($$b_1, b_2, ....., b_8$$), user may refer to the keyword "[GASES](../preparation-of-model-input/keywords-and-input-data/gases.md)", record _**GASES.2**_**.**&#x20;
 
