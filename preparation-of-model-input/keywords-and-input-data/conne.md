@@ -28,7 +28,7 @@ _NAD1_               increment of the code number of the first element between t
 
 _NAD2_               increment of the code number of the second element between two successive connections (used for formatted input only).
 
-_ISOT_               set equal to 1, 2, or 3; specifies absolute permeability to be _PER(ISOT)_ for the materials in elements (_ELNE1_) and (_ELNE2_), where _PER_ is read in block ROCKS. This allows assignment of different permeabilities, e.g., in the horizontal and vertical direction.
+_ISOT_               set equal to 1, 2, or 3; specifies absolute permeability to be _PER(ISOT)_ for the materials in elements (_ELNE1_) and (_ELNE2_), where _PER_ is read in block ROCKS. This allows assignment of different permeabilities, e.g., in the horizontal and vertical direction. ISOT can be in negative or a number large  than 3 for some specific purposes such as in wellbore simulation (see [Section 7/wellbore flow/subsection 2](../../process-modeling/wellbore-flow.md)) and [active fracture model](../../appendix/d-description-of-fractured-flow/active-fracture-modle.md).&#x20;
 
 _D1_                   distance (m) from first element to interface.
 

@@ -28,7 +28,7 @@ Record **WELLB.2.1** （optional)
 
 &#x20;                        ActionWord, para\_1, ......, para\_n
 
-_ActionWord   a_ string which can be a rock name, "GEOTH", "REGFX", or "OFFMA"
+_ActionWord   a_ string which can be a rock name, "GEOTH", "REGFX", "OFFMA", or "FREEE".
 
 **(1)**    If _ActionWord_ is a rock name, parameters for specific well section defined by this rock will be inputted. The parameters are:&#x20;
 

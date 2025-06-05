@@ -119,4 +119,4 @@ _FNIST_
 
 _36, 0.1,  80., 0.5, 30.,  50., 5.0_           &#x20;
 
-&#x20;_//obtained Argon thermophysical property data for pressure range 0.1-80Mpa, temperature range 30-50&#x20;_<sup>_o_</sup>_C with increment 0.4Mpa and 5.0 &#x20;_<sup>_o_</sup>_C, respectively._
+&#x20;_//obtained Argon thermophysical property data for pressure range 0.1-80Mpa, temperature range 30-50&#x20;_<sup>_o_</sup>_C with increment 0.5Mpa and 5.0 &#x20;_<sup>_o_</sup>_C, respectively._

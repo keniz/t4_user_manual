@@ -22,7 +22,7 @@ _NADD_            increment between the code numbers of two successive elements 
 
 _PORX_            porosity; if zero or blank, porosity will be taken as specified in block ROCKS if option START is used.
 
-_stateName_    phase state name. It is important only when the program cannot figure out its phase state through the primary variables.
+_stateName_    phase state name. It is important only when the program cannot figure out its phase state through the primary variables. The state names of each EOS module can be found in [Section 7](../../process-modeling/).
 
 _perm(i)_   grid block permeability, i=1,2 and 3 for x, y, z direction, respectively (optional).
 
