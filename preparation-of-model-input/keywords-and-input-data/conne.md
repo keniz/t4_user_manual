@@ -6,9 +6,9 @@ Keywork CONNE is used for define the connections of model mesh. It must be place
 
 Record **CONNE.1**
 
-&#x20;                       Free format for 11 parameters
+&#x20;                       Free format for 8 parameters
 
-&#x20;                       ELNE1, ELNE2, NSEQ, NAD1, NAD2, ISOT, D1, D2, AREAX, BETAX, SIGX
+&#x20;                       ELNE1, ELNE2, ISOT, D1, D2, AREAX, BETAX, SIGX
 
 &#x20;                       Or Format (A3, I2, A3, I2, 4I5, 5E10.4) (for 5 five-character element name only).
 

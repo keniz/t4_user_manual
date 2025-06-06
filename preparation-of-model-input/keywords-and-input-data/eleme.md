@@ -6,7 +6,7 @@
 
 &#x20;                       Free format for 14 parameters.
 
-&#x20;                       ELNE, NSEQ, NADD, MA12, VOLX, AHTX, PMX, X, Y, Z,
+&#x20;                       ELNE, MA12, VOLX, AHTX, PMX, X, Y, Z,
 
 (USERX(I), I=1,3), Activity
 

@@ -4,9 +4,9 @@
 
 Record **GENER.1**
 
-&#x20;               Free format for 14 parameters.
+&#x20;               Free format for 11 parameters.
 
-&#x20;               ELNE, SLNS, NSEQ, NADD, NADS, LTAB, TYPE, ITAB, GX, EX, HX, LOT12, LOT13, LOT14
+&#x20;               ELNE, SLNS, LTAB, TYPE, ITAB, GX, EX, HX, LOT12, LOT13, LOT14
 
 &#x20;               or Format (A3, I2, A3, I2, 4I5, 5X, A4, A1, 6E10.4) (for 5 -character element name only).
 
