@@ -4,11 +4,13 @@
 
 Record **GOFT.1**
 
-&#x20;                       Free format for 2 parameters, or Format (A5,5X,5X,I5)
+&#x20;                       Free format for 3 parameters, or Format (A5,A5,5X,I5)
 
-&#x20;                       EGOFT, IGOFTF                  &#x20;
+&#x20;                       EGOFT, _SLNS,_ IGOFTF                  &#x20;
 
 _ECOFT_            the name of an element in which a sink/source is defined.
+
+_SLNS_               name of the sink/source (optional, It is necessary only when multiple source/sink in the same element). It will be part of the output file name. &#x20;
 
 _IGOFTF_           a flag to control the amount of printout.
 
