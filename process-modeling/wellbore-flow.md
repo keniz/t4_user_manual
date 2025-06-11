@@ -42,7 +42,19 @@ where α is the thermal dispersivity of the surrounding formation.
 
 In evaluating the flow terms in Eqs. 7-41 and 7-42, subscript _ij + 1/2_ is used to denote a proper averaging or weighting of advective mass transport or heat transfer properties at the interface or along the connection between two blocks or nodes _i_ and _j_ (_j = i - 1_ or _i + 1_). In addition, fully upstream weighting should be used in Eqs. 7-41 and 7-42 for numerical stability.  With the calculated fluxes, the same discrete nonlinear equations (Eqn. 5-7) as other non-wellbore elements are used for mass balance calculation.&#x20;
 
-2. **Input requirements**
+2. **Multiphase flow wellbore modelling**
+
+There are two versions of the wellbore simulation model, one is for three-phase flow and the other is for two-phase flow. The 2-phase and 3-phase well flow model are different approaches for wellbore simulation.  They are implemented separately. Users need to use different executables. Unless indicated otherwise, the default supplied version is the 3-phase flow.
+
+It is possible to use the 3-phase flow version for a 2-phase flow simulation using MODDE 3.4 or IE(22).  Note that, if a system is in three-phase condition but the two-phase model is used for the simulation, both the gas and oil (or liquid co2) phase are treated as "gas" phase in wellbore simulation. Note that outputs variables in all standard output files for 2-phase or 3-phase flow simulations are different (liquid and aqueous variables).
+
+&#x20;Experiments show that the 2-phase approach is more robust in convergence behavior than the 3-phase version, yet the results are similar.  If IE(22) or MODDE 3.4 is on for 3-phase version, better performance can also be observed.
+
+If an EOS module is for 2-phase flow. It always runs the simulation for 2-phase, no matter which version of executable is used.&#x20;
+
+&#x20;At this point in time, only ECO2 and TMVOC have 3 phase flow modelling. All the other EOS are 2 phase flow.
+
+3. **Input requirements**
 
 To evoke a wellbore simulation, users need to input well parameters through keyword "[WELLB](../preparation-of-model-input/keywords-and-input-data/wellb.md)" and also need to turn on the wellbore simulation through keyword "[MODDE](../preparation-of-model-input/keywords-and-input-data/modde.md)", by setting parameter _hWBM_ in record MODDE.3 to TRU&#x45;_._ In addition, the domain (rock) name for the wellbore cells must start with the letter "w" or "x", where "w" indicates normal (open) wellbore cells whereas "x" indicates the special wellbore cells either filled with porous medium or consisting of a bundle of smaller tubes. Wellbore cells are identified by the first character of their rock name ("w" or "x"). Multiple wellbores or multiple branches of a wellbore are allowed. The first cell of each wellbore must have a cell name starting with the character "#" or "\*". The wellhead section must always be defined as the first wellbore cell. &#x20;
 
