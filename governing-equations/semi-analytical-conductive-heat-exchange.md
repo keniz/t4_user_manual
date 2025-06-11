@@ -30,3 +30,7 @@ During fluid injection and production, and as a result of the heat exchange proc
 &#x20;$$q_{total}=\displaystyle\sum_{i=1}^{d-1}f(t_d-t_i) \Delta  T(t_i)$$                                                                                             (4-35)
 
 where, $$t_d$$ represents the current time after _d_ time steps, and $$t_i$$ represents the time after _i_ time steps; the function _f_ is _f1_ if $$t_d-t_i \le2.8$$ , and _f2_ if $$t_d=t_i>2.8$$ . The temperature difference $$\Delta T(t_i)$$ is the temperature in the well at time step _i_, minus the formation temperature at the interface at the previous time step, i.e., $$\Delta T(t_i)=T_w(t_i)-T_f(t_i-1)$$.
+
+
+
+For the implementation of the Semi-Analytical Conductive Heat Exchange, see [MOP(15)](../preparation-of-model-input/keywords-and-input-data/param.md) and/or [IE(27)](../appendix/c-additional-program-options.md).&#x20;
