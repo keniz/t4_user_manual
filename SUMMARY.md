@@ -62,7 +62,7 @@
   * [Non-Darcy Flow](process-modeling/non-darcy-flow.md)
   * [Enhanced Coal Bed Methane](process-modeling/enhanced-coal-bed-methane.md)
 * [8️⃣ PREPARATION  OF MODEL INPUT](preparation-of-model-input/README.md)
-  * [Input Formatting ](preparation-of-model-input/input-formatting.md)
+  * [Input formatting and structure](preparation-of-model-input/input-formatting-and-structure.md)
   * [Keywords and Input Data](preparation-of-model-input/keywords-and-input-data/README.md)
     * [TITLE](preparation-of-model-input/keywords-and-input-data/title.md)
     * [BIODG](preparation-of-model-input/keywords-and-input-data/biodg.md)
