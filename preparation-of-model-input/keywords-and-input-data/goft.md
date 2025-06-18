@@ -32,4 +32,4 @@ If the input keyword is in lower case “goft” or “goft\_”, an alternative
 
 _GOFT_
 
-_AAA01, 1                               //write out time series of gas rate for the well at "AAA01"._ &#x20;
+_AAA01,inj1, 1                               //write out time series of gas rate for the well at "AAA01"._ &#x20;
