@@ -238,6 +238,16 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:  turn on the Python interface to the function for initial condition calculation.&#x20;
 
+**IE(70)**             Selection of volume translated method for improving the accuracy of liquid (oil) density predictions made by cubic equations of state (EoS). &#x20;
+
+0: The Peneloux volume correction (Peneloux, et al., 1982, default).
+
+1:  The Peneloux volume correction (Peneloux, et al., 1982).
+
+2:  Method proposed by Lin and Duan (2005)
+
+3: No correction.
+
 **IE(79)**             Simulation results can be sent to the Python interface. User can access these data through a python function. Three default parameters to be sent are saturations for all phases (parameter1), mass fraction of all components for all phases (parameter3), and pressure for all phases(parameter3). See Python function "_UserDefinedELOutput_" (TOUGH\_python\_module.py) for details. &#x20;
 
 0: Off, no simulation results be sent to Python interface
