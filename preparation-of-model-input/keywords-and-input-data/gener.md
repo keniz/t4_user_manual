@@ -151,7 +151,7 @@ _F3_                   specific enthalpy of produced or injected fluid.
 
 &#x20;                       Repeat records GENER.1, 1.1, 1.2, and 1.3 for the number of sinks/sources desired.
 
-We provide an alternative input for Record **GENER.l.l** (optional, _LTAB_ < -1 only)
+We provide an alternative input for Record **GENER.l.l** (optional, _LTAB_ < -1 only). Users may use this option for input of complex well operation.&#x20;
 
 &#x20;                       Free format for 4 parameters per line, or Format (3E14.7, 1A10)
 
@@ -175,13 +175,13 @@ _GTime_ can be in different time unit and in time series or time section based o
 
 "SECS"               Time unit is in second, time series (default).
 
-"HOUS"              Time unit is in day, time series.
+"HOUS"              Time unit is in hour, time series.
 
 "DAYS"               Time unit is in day, time series..
 
 "SECP"               Time unit is in second, time period.
 
-"HOUP"              Time unit is in day, time period.
+"HOUP"              Time unit is in hour, time period.
 
 "DAYP"               Time unit is in day, time period.
 
@@ -231,11 +231,11 @@ _A3A 1, injH2,  ,  ,  , -12,  DAYP,_&#x20;
 
 2.0, -10.0, , WATE                                    //produce water    &#x20;
 
-5.0, 1.0,  .526684E+0&#x36;_, CO2                 //inject CO2, 5.356e4 enthalpy of injected CO2_
+5.0, 1.0,  5.267E+0&#x35;_, CO2                     //inject CO2, 5.267e5 enthalpy of injected CO2_
 
 _3.0,  ,  ,CLOS                                             //close well_
 
-_0.2, 2.0,  5.356e4 , H2                             // inject H2_
+_0.2, 2.0,  5.356e4 , H2                             // inject H2, H2 has an enthalpy of 5.356e4_&#x20;
 
 _0.7, , ,CLOS_
 
@@ -261,7 +261,7 @@ _A3A 1, injH2,  ,  ,  , -12,  DAYS,_
 
 0.0, -10.0, , WATE                                    //produce water    &#x20;
 
-2.0, 1.0,  .526684E+0&#x36;_, CO2                 //inject CO2, 5.356e4 enthalpy of injected CO2_
+2.0, 1.0,  5.267E+0&#x35;_, CO2                      //inject CO2,_ 5.267E+05 _enthalpy of injected CO2_
 
 _7.0,  ,  ,CLOS                                             //close well_
 
