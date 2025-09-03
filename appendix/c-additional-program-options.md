@@ -336,6 +336,22 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:   solubility is independent of temperature (compatible with TOUGH3/EOS7 and TMVOC)
 
+
+
+(For **FE(50)**-**FE(55)**, see [ECO2 process modeling](../process-modeling/eco2.md) for details)
+
+**FE(50)**             lower bound of pressure range (in Pa) for CO2 thermophysical properties. &#x20;
+
+**FE(51)**              upper bound of pressure range (in Pa) for CO2 thermophysical properties.
+
+**FE(52)**             lower bound of temperature range (in $$^oC$$) for CO2 thermophysical properties. &#x20;
+
+**FE(53)**             upper bound of temperature range (in $$^oC$$) for CO2 thermophysical properties.
+
+**FE(54)**             lower bound of the transition zone  temperature range (in $$^oC$$). &#x20;
+
+**FE(55)**             upper bound of the transition zone  temperature range (in $$^oC$$).
+
 **FE(56)**             The density of injected fluid at standard temperature and pressure (STP)  which is needed when the fluid injection rate is in volume   ( $$kg/m^3$$).
 
 **FE(57)-FE(69)**    The densities of the model components 1-12 at standard temperature and pressure (STP), respectively. These densities are used for calculation of the produced mixture fluid density which only needed when the fluid production is in volume rate (see ITAB input with record [ GENER.1](../preparation-of-model-input/keywords-and-input-data/gener.md)). The density of the produced mixture fluid at STP condition using the known component mass fractions and densities of each component is calculated as follows:
