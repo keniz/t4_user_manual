@@ -126,7 +126,7 @@ Heat capacity and conductivity of the confining beds are specified in block ROCK
 
 On the first line, _NMATQLOSS_ is the number of elevations with geometric and thermal data, and _NMATQLOSS_ lines are provided with the following data in free format: elevation \[m], well radius \[m], initial temperature \[°C], _CWET_, _DROK_, _SPHT_. Between elevations, properties are calculated using linear interpolation.
 
-RESTART is possible for linear heat exchange between a reservoir and confining beds (_MOP(15)_= 1 or 2), but not for radial heat exchange (_MOP(15)_= 5 or 6).  The data necessary for continuing the linear heat exchange calculation in a TOUGH4 continuation run are written onto a text file named TABLE. When restarting a simulation run, this file has to be present in the working folder. If file TABLE is absent, TOUGH4 assumes that no prior heat exchange with confining beds has taken place.
+RESTART is possible for linear heat exchange between a reservoir and confining beds (_MOP(15)_= 1 or 2), but not for radial heat exchange (_MOP(15)_= 5 or 6).  The data necessary for continuing the linear heat exchange calculation in a TOUGH4 continuation run are written onto a text file named TABLE\_SAVE. When restarting a simulation run, this file has to be renamed to "TABLE" and present in the working folder. If file TABLE is absent, TOUGH4 assumes that no prior heat exchange with confining beds has taken place.
 
 _MOP(16)_       provides automatic time step control.
 
