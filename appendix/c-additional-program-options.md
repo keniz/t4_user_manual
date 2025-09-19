@@ -330,13 +330,23 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:   output diffusive flux for different phases/components.
 
+**IE(401)**           Selects gas/hydrocarbon viscosity calculation method (for EOS7, EWASG, and ECOF only).
+
+0:  Chung et al. 1988)
+
+1:   Quinones et al. (2001; 2000)
+
 **IE(402)**           Selects air solubility calculation method
 
 0:  solubility is a function of temperature
 
 1:   solubility is independent of temperature (compatible with TOUGH3/EOS7 and TMVOC)
 
+**IE(403)**           Output unit selection for module TMVOC and ECOF
 
+0:  units for output are: density--mole/m<sup>3</sup>; enthalpy--J/mole; component fraction--mole fraction; flux--mole/s (default).
+
+1:   units for output are: density--kg/m<sup>3</sup>; enthalpy--J/kg; component fraction--mass fraction; flux--kg/s.
 
 (For **FE(50)**-**FE(55)**, see [ECO2 process modeling](../process-modeling/eco2.md) for details)
 
