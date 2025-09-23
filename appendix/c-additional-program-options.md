@@ -168,9 +168,9 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 3:  User defined STP, the standard temperature and pressure must be inputted through FE(70) and FE(71) respectively.&#x20;
 
-4: At reservoir condition, RB (for production only).
+4: At reservoir condition, volume in RB (for production only).
 
-5: At reservoir condition,  m<sup>3</sup> (for production only).
+5: At reservoir condition,  volume in m<sup>3</sup> (for production only).
 
 **IE(57)**              In real gas property module (used by EOS7 and EWASG),  calculated CO2 density may have big error when CO2 is in liquid phase, along the saturation line or near the critical point.  As an alternative, user may use the CO2 property module for the CO2 density calculation (other thermophysical parameters are remain calculated using the real gas property module):
 
