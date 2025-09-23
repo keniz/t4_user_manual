@@ -150,7 +150,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:    potential energy is included. The Z coordinates for each element in the MESH file must be elevation for using this option.
 
-**IE(55)**              In GENER input, the production or injection rate can be in a volume rate (see ITAB input with record [ GENER.1](../preparation-of-model-input/keywords-and-input-data/gener.md)). If a volume rate is used, user must specified the phase condition of produced /injected fluid at the standard temperature and pressure condition (STP, it can be different in different industry, see **IE(56)** for more information)
+**IE(55)**              In GENER input, the production or injection rate can be in a volume rate (see ITAB input with record [ GENER.1](../preparation-of-model-input/keywords-and-input-data/gener.md)). If a volume rate is used, user must specified the phase condition of produced /injected fluid at the standard temperature and pressure condition (STP, it can be different in different industry, see **IE(56)** for more information), or at the reservoir condition.
 
 0, 1:   Gas phase (default)**.**
 
@@ -158,7 +158,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 3:      Oil/Liquid CO2 phase.  &#x20;
 
-**IE(56)**              TOUGH4 allows using different standard temperature and pressure condition: &#x20;
+**IE(56)**              TOUGH4 allows using different temperature and pressure condition or reservoir condition for input of the produced/injected fluid volume: &#x20;
 
 0:  The American Petroleum Institute STP: 288.7 K and 101,325 Pa  (default).
 
@@ -167,6 +167,10 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 2:  ISO 13443 STP: 288.15 K and 101,325 Pa
 
 3:  User defined STP, the standard temperature and pressure must be inputted through FE(70) and FE(71) respectively.&#x20;
+
+4: At reservoir condition, RB (for production only).
+
+5: At reservoir condition,  m<sup>3</sup> (for production only).
 
 **IE(57)**              In real gas property module (used by EOS7 and EWASG),  calculated CO2 density may have big error when CO2 is in liquid phase, along the saturation line or near the critical point.  As an alternative, user may use the CO2 property module for the CO2 density calculation (other thermophysical parameters are remain calculated using the real gas property module):
 
