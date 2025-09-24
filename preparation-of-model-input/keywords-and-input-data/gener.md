@@ -26,7 +26,7 @@ _NADD_             increment between the code numbers of two successive elements
 
 _NADS_             increment between the code numbers of two successive sinks/sources (used for formatted input only).
 
-_LTAB_               number of points in table of generation rate versus time. Set 0 or 1 for constant generation rate. For wells on deliverability, _LTAB_ denotes the number of open layers, to be specified only for the bottommost layer.
+_LTAB_               number of points in table of generation rate versus time. Set 0 or 1 for constant generation rate. For wells on deliverability, _LTAB_ denotes the number of open layers, to be specified only for the bottommost layer. If _LTAB_ < -1，an alternative input format will be used. See the end of this section for details of the alternative input format.
 
 _TYPE_              specifies different options for fluid or heat production and injection. For example, different fluid components may be injected, the nature of which depends on the EOS module being used. Different options for considering wellbore flow effects may also be specified.
 
@@ -95,13 +95,13 @@ _ITAB_               unless left blank, table of specific enthalpies will be rea
 
 &#x20;          _“V” or “v”_     production or injection rate is in volume per second, no time series of
 
-&#x20;                              specific enthalpy data will be read (may need additional inputs with[ **IE(55)**, ](../../appendix/c-additional-program-options.md)
+&#x20;                              specific enthalpy data will be read (may need additional inputs with[ **IE(55)**, **IE(56),** ](../../appendix/c-additional-program-options.md)
 
 &#x20;                              [**FE(66)**-](../../appendix/c-additional-program-options.md)[**FE(79)**](../../appendix/c-additional-program-options.md)).
 
 &#x20;           “_T” or “t_”     production or injection rate is in volume per second, the time series of
 
-&#x20;                              specific enthalpy data will be read  (may need additional inputs with[ **IE(55)**, ](../../appendix/c-additional-program-options.md)
+&#x20;                              specific enthalpy data will be read  (may need additional inputs with[ **IE(55), IE(56),** ](../../appendix/c-additional-program-options.md)
 
 &#x20;                              [**FE(66)**- ](../../appendix/c-additional-program-options.md)[**FE(79)**](../../appendix/c-additional-program-options.md)).
 

@@ -150,7 +150,7 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:    potential energy is included. The Z coordinates for each element in the MESH file must be elevation for using this option.
 
-**IE(55)**              In GENER input, the production or injection rate can be in a volume rate (see ITAB input with record [ GENER.1](../preparation-of-model-input/keywords-and-input-data/gener.md)). If a volume rate is used, user must specified the phase condition of produced /injected fluid at the standard temperature and pressure condition (STP, it can be different in different industry, see **IE(56)** for more information), or at the reservoir condition.
+**IE(55)**              In GENER input, the production or injection rate can be in a volume rate (see ITAB input with record [ GENER.1](../preparation-of-model-input/keywords-and-input-data/gener.md)). If a volume rate is used, user must specified the phase condition of produced /injected fluid at the standard temperature and pressure condition (STP, it can be different in different industry, see **IE(56)** for more information), or at the reservoir condition. If the phase condition can be figured out through well "TYPE", the input of IE(55) will be ignored.&#x20;
 
 0, 1:   Gas phase (default)**.**
 
