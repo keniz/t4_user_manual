@@ -38,7 +38,7 @@ _TCRITM_          chemical critical temperature, K.
 
 _VCRITM_          chemical critical volume, liters/mole (for ECOF only).
 
-VSHIFT            volume shifting amount for liquid density correction using Peneloux volume translated method, _m_<sup>_3_</sup> (for ECOF only).
+VSHIFT            volume shifting amount for liquid density correction using Peneloux volume translated method, _cm³/mol_ (for ECOF only).
 
 Record **CHEMP.4**
 
