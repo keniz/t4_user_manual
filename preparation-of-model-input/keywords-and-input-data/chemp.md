@@ -22,9 +22,9 @@ _RecordID_       a list of the data record IDs. Only the records listed  here wi
 
 Record **CHEMP.3**
 
-&#x20;                       Free format for 5 parameters, or Format (5E10.4)
+&#x20;                       Free format for 7 parameters, or Format (7E10.4)
 
-&#x20;                       TCRITM, PCRITM, ZCRITM, OMEGAM, DIPOLMM
+&#x20;                       TCRITM, PCRITM, ZCRITM, OMEGAM, DIPOLMM, VCRITM, VSHIFT
 
 _TCRITM_          chemical critical temperature, K.
 
@@ -35,6 +35,10 @@ _TCRITM_          chemical critical temperature, K.
 &#x20;_OMEGAM_     Pitzer's acentric factor for the chemical.
 
 &#x20;_DIPOLMM_     chemical dipole moment, debyes.
+
+_VCRITM_          chemical critical volume, liters/mole (for ECOF only).
+
+VSHIFT            volume shifting amount for liquid density correction using Peneloux volume translated method, _m_<sup>_3_</sup> (for ECOF only).
 
 Record **CHEMP.4**
 
@@ -86,9 +90,9 @@ _TEXPOM_          exponent for calculation of chemical diffusivity.
 
 Record **CHEMP.7**
 
-&#x20;                       Free format for 5 parameters, or Format (5E10.4)
+&#x20;                       Free format for 4 parameters, or Format (4E10.4)
 
-&#x20;                       VLOAM, VLOBM, VLOCM, VLODM, VOLCRITM
+&#x20;                       VLOAM, VLOBM, VLOCM, VLODM
 
 Two options are available for calculating the NAPL liquid viscosity. The liquid viscosity constants VLOAM - VLODM for the desired NAPL may be assigned data given in Table 9-8 of Reid et al. (1987), and the viscosity will be calculated using a polynomial fit to actual viscosity data (Eq. 4.3.11 in[ TMVOC user manual](https://tough.lbl.gov/assets/files/Tough3/TMVOC_Users_Guide.pdf)). Alternatively, VLOAM and VLOBM may be set equal to 0, and VLOCM and VLODM are assigned equal to a reference viscosity and a reference temperature, respectively. In this case, the viscosity is calculated from a more general (and less accurate) empirical correlation (Van Velzen et al., 1972).
 
@@ -99,8 +103,6 @@ _VLOBM_            liquid NAPI viscosity constant from Reid et al. (1987).
 _VLOCM_            liquid NAPL viscosity constant from Reid et al. (1987). If VLOAM and VLOBM = 0, VLOCM is reference NAPL viscosity in units of cP (1 cP = 10-3 Pa-s).
 
 _VLODM_            liquid NAPL viscosity constant from Reid et al. (1987). If VLOAM and VLOBM = 0, VLODM is reference temperature for NAPL viscosity in units of Kelvin.
-
-_VOLCRITM_     chemical critical volume, cm3/mole.
 
 Record **CHEMP.8**
 
@@ -200,4 +202,4 @@ C10H22,10
 
 9.7866E-02, 3.3693E-08, 0.0          // bij between C10H22 and  CO2, C4H10, C10H22 , respectively
 
-\*The coefficients between water and and these components (the 4th slot) do not present in the input. The default values will be used.   &#x20;
+\*If the coefficients between water and these components (the 4th slot) do not present in the input. The default values will be used.   &#x20;
