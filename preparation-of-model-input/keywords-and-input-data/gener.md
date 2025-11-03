@@ -199,13 +199,9 @@ Alternatively, generation information may terminate on a record with ‘+++’ t
 
 _GENER                              // in main input file_
 
-_A3A 1, injH2, , , , , COM3,  , 5.0E+00, 5.356e4     //ELNE, SLNS,  ,  ,  ,  , TYPE,  , GX, EX_
+_A3A 1, injH2, , COM3,  , 5.0E+00, 5.356e4     //ELNE, SLNS,  ,  ,  ,  , TYPE,  , GX, EX_
 
-In GENER **file** with free format, TOUGH4 does not allow including NSEQ, NADD, and NADS (which will not be used) in the input line. The formatted input remains the same parameters which is for compatible with TOUGH3 input.
-
-_GENER_&#x20;
-
-_A3A 1, injH2,  , COM3,  , 5.0E+00, 5.356e4       //ELNE, SLNS,  LTAB, TYPE,  ITAB, GX, EX_
+The free format input does not allow including NSEQ, NADD, and NADS (which will not be used) in the input line. The formatted input remains the same parameters which is for compatible with TOUGH3 input.
 
 We may use the **alternative input** for a complex well operation. For example, a well for H2 storage has following operation history:
 
@@ -227,7 +223,7 @@ The input will be:
 
 _GENER_
 
-_A3A 1, injH2,  ,  ,  , -12,  DAYP,_&#x20;
+_A3A 1, injH2, -12,  DAYP,_&#x20;
 
 2.0, -10.0, , WATE                                    //produce water    &#x20;
 
@@ -257,7 +253,7 @@ If "_TYPE_" is "DAYS" , the input will be like:
 
 _GENER_
 
-_A3A 1, injH2,  ,  ,  , -12,  DAYS,_
+_A3A 1, injH2,  -12,  DAYS,_
 
 0.0, -10.0, , WATE                                    //produce water    &#x20;
 
@@ -283,4 +279,4 @@ _12.2, , ,CLOS_
 
 _12.9, -4.0,   , H2_
 
-MOP(12) must be 2 for this inpu&#x74;_._&#x20;
+MOP(12) must be 2 for this type of inpu&#x74;_._&#x20;
