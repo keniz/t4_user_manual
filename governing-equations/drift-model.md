@@ -22,7 +22,7 @@ where $$X^{\kappa}_{\beta}$$ is the mass fraction of component $$\kappa$$ in flu
 
 accumulation term for energy is defined as
 
-$${M^e} = \sum\limits_\beta  {\left( {{\rho _\beta }{S_\beta }{U_\beta } + \frac{1}{2}{\rho _\beta }{S_\beta }U_\beta ^2} \right)}$$                                                                               (4-39)
+$${M^e} = \sum\limits_\beta  {\left( {{\rho _\beta }{S_\beta }{U_\beta } + \frac{1}{2}{\rho _\beta }{S_\beta }u_\beta ^2} \right)}$$                                                                               (4-39)
 
 where _U_ is the internal energy of phase , and _u_ is the average phase velocity in the wellbore. The two right-hand-side terms in Eq. 4-39 represent the accumulation of internal and kinetic energy, respectively.
 
