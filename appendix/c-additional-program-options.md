@@ -52,11 +52,11 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1: VPL is on.
 
-**IE(25)**             The input for tracer distribution coefficient (_XKD1)_ and fraction of organic carbon (_FOCM_) through [_ROCKS.1.1_](../preparation-of-model-input/keywords-and-input-data/rocks.md) is conflict for TMVOC. For maintaining the compatibility of input file from TOUGH3/TMVOC and other TOUGH4 modules, IE(25) is used to coordinate the inputs. The input is through lot 6-10 of ROCKS.1.1. (for TMVOC only)
+**IE(25)**             The input for tracer distribution coefficient (_XKD1)_ and fraction of organic carbon (_FOCM_) through [_ROCKS.1.1_](../preparation-of-model-input/keywords-and-input-data/rocks.md) is conflict for TMVOC. For maintaining the compatibility of input file from TOUGH3/TMVOC and other TOUGH4 modules, IE(25) is used to coordinate the inputs. The input is through slot 6-10 of ROCKS.1.1. (for TMVOC only)
 
-0:                    lot 6 is for FOCM input, lot7-lot10 for XKD1-XKD4 input.
+0:                    slot 6 is for FOCM input, slot7-slot10 for XKD1-XKD4 input.
 
-1:                     lot 6-10 is for XKD1-XKD5 input, no FOCM input.&#x20;
+1:                     slot 6-10 is for XKD1-XKD5 input, no FOCM input.&#x20;
 
 **IE(26)**             Checks whether wellbore flow turns direction (wellbore simulation only).&#x20;
 
@@ -212,19 +212,19 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 **IE(64)**              For preventing oscillatory phase transitions.  A larger IE(64) value represents that, once the system transitions to a different phase, it becomes more difficult to revert to the original phase condition.   It can be in the range 1-10.   Default IE(64)=2.  &#x20;
 
-**IE(65)**              Adding small artificial friction at near zero velocity condition to gain numerical stable condition.&#x20;
+**IE(65)**              Adding small artificial friction at near zero velocity condition to gain numerical stable condition (for wellbore simulation only).&#x20;
 
 0:  on.&#x20;
 
 1:   off.&#x20;
 
-**IE(66)**              Two versions of function are implemented in TOUGH4 for calculating the heat loss through wellbore using analytical solution. The function is sensitive to the convergence for some non-isothermal simulations. User may select different version to achieve best performance. &#x20;
+**IE(66)**              Two versions of function are implemented in TOUGH4 for calculating the heat loss through wellbore using analytical solution. The function is sensitive to the convergence for some non-isothermal simulations. User may select different version to achieve best performance  (for wellbore simulation only). &#x20;
 
 0: Using (Ramey, 1962), including short time solution.
 
 1:  Using (Ramey, 1962), not including short time solution.
 
-**IE(67)**              Two versions of function are implemented in TOUGh4 for calculating the acceleration loss in a well. This function is sensitive to the convergence for some simulations.  User may select different version to achieve best performance. &#x20;
+**IE(67)**              Two versions of function are implemented in TOUGh4 for calculating the acceleration loss in a well. This function is sensitive to the convergence for some simulations.  User may select different version to achieve best performance  (for wellbore simulation only). &#x20;
 
 0:  Newer version.&#x20;
 
@@ -252,19 +252,19 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 3: No correction.
 
-**IE(79)**             Simulation results can be sent to the Python interface. User can access these data through a python function. Three default parameters to be sent are saturations for all phases (parameter1), mass fraction of all components for all phases (parameter3), and pressure for all phases(parameter3). See Python function "_UserDefinedELOutput_" (TOUGH\_python\_module.py) for details. &#x20;
+**IE(79)**             Simulation results can be sent to the Python interface. User can access these data through a python function. Three default parameters to be sent are saturations for all phases (parameter1), mass fraction of all components for all phases (parameter2), and pressure for all phases(parameter3). See Python function "_UserDefinedELOutput_" (TOUGH\_python\_module.py) for details. &#x20;
 
 0: Off, no simulation results be sent to Python interface
 
 1: On, turn on the Python interface for the output data.&#x20;
 
-**IE(80)**             User may send different parameter other than the default one  (see **IE(79)**) to Python interface . the first parameter (Parameter1) is:  &#x20;
+**IE(80)**             User may send different parameter other than the default one  (see **IE(79)**) to Python interface . The first parameter (Parameter1) is:  &#x20;
 
 0: default parameter,  saturations for all phases.
 
 2-8:  2-viscosity for all phases ; 3-density for all phases; 4- enthalpy for all phases; 5-capillary pressures; 6-temperature; 7-mass fraction of all components in all phases; 8-pressure for all phase.&#x20;
 
-**IE(81)**             User may send different parameter other than the default one  (see **IE(79)**) to Python interface . the second parameter (Parameter2) is:  &#x20;
+**IE(81)**             User may send different parameter other than the default one  (see **IE(79)**) to Python interface . The second parameter (Parameter2) is:  &#x20;
 
 0: default parameter,  mass fraction of all components in all phases.
 
