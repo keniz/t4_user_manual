@@ -312,6 +312,12 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1: On     &#x20;
 
+**IE(90)**              TOUGH4 provides another option for user to use the analytical solutions of CO2 property. This option may be a little bit slow, but more accorate. If it is on, the density, viscosity and enthalpy for any given temperature and pressure will be directly calculated using the  the analytical solutions (not from table interpolation), for ECO2 module only.&#x20;
+
+0: Off
+
+1:  On
+
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 
 **IE(111)**            Selects thermodynamic formulation.

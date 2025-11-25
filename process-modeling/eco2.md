@@ -161,3 +161,5 @@ The partitioning of H2O and CO2 among co-existing aqueous and gas phases is calc
 **FE(54)**             lower bound of the transition zone  temperature range (in $$^oC$$). &#x20;
 
 **FE(55)**             upper bound of the transition zone  temperature range (in $$^oC$$).
+
+**IE(90)**              TOUGH4 provides another option for user to use the analytical solutions of CO2 property. This option may be a little bit slow, but more accorate. if IE(90)>0, the density, viscosity and enthalpy for any given temperature and pressure will be directly calculated using the  the analytical solutions.&#x20;
