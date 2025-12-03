@@ -14,11 +14,11 @@ _MaxC0_           the maximum value of the profile parameter (Cmax).
 
 _ku_                    critical Kutateladze number.
 
-_WellFrac_        wellbore fraction in the model grid (default is 1.0,  must be <=1.0).
+_WellFrac_        wellbore volume fraction in the model grid (default is 1.0,  must be <=1.0).
 
 _Epson_             roughness parameter of the well wall.
 
-_Sg1_                  parameter.
+_Sg1_                  a parameter (Fv in original literature, see Shi et al., 2005 for details) for calculating C<sub>0</sub>. Profile parameter C<sub>0</sub> flattening can be made more or less sensitive to the gas velocity by adjusting the value of Sg1 (default =1).
 
 _btExch_           borehole heat exchange with surrounding rocks, TRUE or FALSE. If it is TRUE, the input of HeatExch  (see WELLB.2.1) for all well sections will be neglected.  &#x20;
 
