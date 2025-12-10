@@ -124,6 +124,18 @@ The AQU ==> AQG transition will only be made when X >$$X_{aq,g}$$\* (1+FE(4)).
 
 1:    co-existing of liquid and gas phase CO2.  &#x20;
 
+**IE(90)**              TOUGH4 provides another option for user to use the analytical solutions of CO2 property. This option may be a little bit slow, but more accorate. If it is on, the density, viscosity and enthalpy for any given temperature and pressure will be directly calculated using the  the analytical solutions (not from table interpolation).&#x20;
+
+0: Off
+
+1:  On
+
+**IE(92)**   When an element is at a phase state condition near the CO2 saturation line, its thermophysical properties may change dramatically with tiny change of pressure or/and temperature. The abrupt change of thermophysical properties may cause bad convergence in solving the non-linear equations. TOUGH4 allows users to use a blending approach for calculation of thermophysical properties near the saturation line. This approach may help to improve the convergence behavior for some models.  &#x20;
+
+0: Off
+
+1:  On
+
 
 
 **FE(1)**               parameter γ (for IE(11)=1); parameter $$\phi_r$$(for IE(11) = 2, 3)&#x20;
@@ -161,5 +173,3 @@ The partitioning of H2O and CO2 among co-existing aqueous and gas phases is calc
 **FE(54)**             lower bound of the transition zone  temperature range (in $$^oC$$). &#x20;
 
 **FE(55)**             upper bound of the transition zone  temperature range (in $$^oC$$).
-
-**IE(90)**              TOUGH4 provides another option for user to use the analytical solutions of CO2 property. This option may be a little bit slow, but more accorate. if IE(90)>0, the density, viscosity and enthalpy for any given temperature and pressure will be directly calculated using the  the analytical solutions.&#x20;

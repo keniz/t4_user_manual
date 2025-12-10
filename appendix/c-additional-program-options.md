@@ -318,6 +318,12 @@ n (n>0):           Output mass balance for rock _n_ and the whole system.
 
 1:  On
 
+**IE(92)**   When an element is at a phase state condition near the CO2 saturation line, its thermophysical properties may change dramatically with tiny change of pressure or/and temperature. The abrupt change of thermophysical properties may cause bad convergence in solving the non-linear equations. TOUGH4 allows users to use a blending approach for calculation of thermophysical properties near the saturation line. This approach may help to improve the convergence behavior for some models, for ECO2 module only.  &#x20;
+
+0: Off
+
+1:  On
+
 **IE(101)-IE(126)**       If are non-zero values, they are equivalent to [MOP2(1)-MOP2(26)](../preparation-of-model-input/keywords-and-input-data/momop.md).
 
 **IE(111)**            Selects thermodynamic formulation.
