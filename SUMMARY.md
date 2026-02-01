@@ -54,6 +54,7 @@
   * [EOS7](process-modeling/eos7.md)
   * [EOS9](process-modeling/eos9.md)
   * [ECO2](process-modeling/eco2.md)
+  * [ECOF](process-modeling/ecof.md)
   * [EWASG](process-modeling/ewasg.md)
   * [TMVOC](process-modeling/tmvoc.md)
   * [Tracers/Decay Chain](process-modeling/tracers-decay-chain.md)
